@@ -4,22 +4,14 @@ import Header from './Header.jsx';
 import Main from './Main.jsx';
 import Footer from './Footer.jsx';
 
-// import styled from "styled-components";
+
 
 
 /* ---------------- css ---------------- */
 // const StyledHeader = styled.header`
-//   height: 200px;
-//   width: auto;
-//   background-color: aqua;
-//   margin: 0;
-//   .header-top {
-//     height: 100%;
-//     width: 50%;
-//     background-color: black;
-//   }
+
 // `;
-// console.log(StyledHeader);
+
 // const StyledMain = styled.main`
 //   height: 400px;
 //   width: auto;
