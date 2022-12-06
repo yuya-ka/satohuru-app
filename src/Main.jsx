@@ -1,7 +1,14 @@
+import './style/main.css';
+
 const Main = () => {
   return (
     <div className="main">
-      <p>Hello</p>
+      <div className="main-top">
+      </div>
+      <div className="main-center">
+      </div>
+      <div className="main-bottom">
+      </div>
     </div>
   );
 }

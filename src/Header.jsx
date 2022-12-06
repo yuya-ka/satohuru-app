@@ -1,14 +1,20 @@
+import './style/header.css';
 
 const Header = () => {
   return (
-    <div className="header">
-      <div className="header-top">
+    <header className='header'>
+      <div className='header-top'>
+        <p className='header-top-tagline'></p>
+        <ul className='header-top-nav'></ul>
       </div>
-      <div className="header-center">
+      <div className='header-center'>
+        <div className='header-center-logo'></div>
+        <div className='header-center-search'></div>
+        <div className='header-center-nav'></div>
       </div>
-      <div className="header-bottom">
+      <div className='header-bottom'>
       </div>
-    </div>
+    </header>
   );
 }
 

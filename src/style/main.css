@@ -1,0 +1,21 @@
+.main {
+  min-width: 1020px;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 1000px;
+  background-color: rgb(121, 179, 141);
+}
+
+.main .main-top {
+  width: 100%;
+  height: 0;
+}
+.main .main-center {
+  width: 100%;
+  height: 0;
+}
+.main .main-bottom {
+  width: 100%;
+  height: 0;
+}
