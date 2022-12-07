@@ -8,7 +8,6 @@ const StyledFooter = styled.footer`
   width: auto;
   height: auto;
   position: relative;
-  z-index: 400;
 `;
 /* ---------------- top ---------------- */
 const StyledFooterTop = styled.div`
@@ -27,7 +26,7 @@ const StyledFooterTopContentFirst = styled.div`
   height: 80%;
   width: 980px;
   margin: 0;
-  padding: 1px;
+  padding: 4px;
   box-sizing: border-box;
   border: solid 2px black;
   display:flex;
@@ -35,7 +34,7 @@ const StyledFooterTopContentFirst = styled.div`
 const StyledFooterTopContent1 = styled.div`
   height: 100%;
   width: 50%;
-  margin: 2px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: solid 2px black;
@@ -43,7 +42,7 @@ const StyledFooterTopContent1 = styled.div`
 const StyledFooterTopContent2 = styled.div`
   height: 100%;
   width: 50%;
-  margin: 2px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: solid 2px black;
@@ -51,7 +50,6 @@ const StyledFooterTopContent2 = styled.div`
 const StyledFooterTopContentLast = styled.div`
   margin-top: 40px;
   width: 980px;
-
   box-sizing: border-box;
   border: solid 2px black;
   height: 20%;

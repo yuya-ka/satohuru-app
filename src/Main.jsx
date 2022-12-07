@@ -5,16 +5,15 @@ const StyledMain = styled.main`
   min-width: 1020px;
   margin: 0;
   padding-bottom: 50px;
-  height: 1500px;
+  height: auto;
   background-color: rgb(121, 179, 141);
   position: relative;
-  z-index: 200;
 `;
 const StyledMainContent = styled.div`
   width: 980px;
   height: 100%;
   margin: 0 auto;
-  padding-bottom:50px;
+  padding-bottom: 50px;
 `;
 const StyledMainContentOuter = styled.div`
   width: 980px;
@@ -65,7 +64,6 @@ const StyledMainBottom = styled.div`
   box-sizing: border-box;
   border: solid 2px black;
   padding: 2px;
-
 `;
 
 

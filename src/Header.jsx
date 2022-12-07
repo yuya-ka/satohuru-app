@@ -95,13 +95,11 @@ const StyledHeaderBottom = styled.div`
   position: relative;
   width: 1020px;
   height: 50px;
-  z-index: 500;
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: solid 2px black;
   padding: 0 20px 10px;
-  background-color: #fff!important;
+  background-color: #fff;
 `;
 
 
