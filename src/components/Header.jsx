@@ -7,41 +7,35 @@ const StyledHeader = styled.header`
   padding: 0;
   width: auto;
   height: auto;
-  position: relative;
 `;
 /* ---------------- top ---------------- */
 const StyledHeaderTop = styled.div`
+  min-width: 1020px;
   margin: 0;
   padding: 0;
-  width: 100%;
   height: 40px;
   background-color: #f7f3e7;
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 const StyledHeaderTopTag = styled.p`
   margin: 0;
   padding: 0;
-  width: 200px;
-  height: 20px;
-  position: absolute;
-  box-sizing: border-box;
-  border: solid 2px black;
-  left: 20px;
-  top: 11px;
-  line-height: 1.4;
+  font-size: 12px;
 `;
 const StyledHeaderTopNav = styled.ul`
   margin: 0;
   padding: 0;
-  width: 50%;
-  height: 20px;
   list-style: none;
-  position: absolute;
-  box-sizing: border-box;
-  border: solid 2px black;
-  right: 20px;
-  top: 11px;
-  line-height: 1.4;
+`;
+const StyledHeaderTopNavLi = styled.li`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+  margin-left: 30px;
+  font-size: 12px;
 `;
 /* ---------------- center ---------------- */
 const StyledHeaderCenter = styled.div`
@@ -110,12 +104,19 @@ const Header = () => {
     <StyledHeader>
       
       <StyledHeaderTop>
-        <StyledHeaderTopTag></StyledHeaderTopTag>
-        <StyledHeaderTopNav></StyledHeaderTopNav>
+        <StyledHeaderTopTag>ランニングとレビューで探せる利用率No.1ふるさと納税サイト</StyledHeaderTopTag>
+        <StyledHeaderTopNav>
+          <StyledHeaderTopNavLi>ログイン</StyledHeaderTopNavLi>
+          <StyledHeaderTopNavLi>新規会員登録</StyledHeaderTopNavLi>
+          <StyledHeaderTopNavLi>よくあるご質問</StyledHeaderTopNavLi>
+          <StyledHeaderTopNavLi>クラウドファンディング</StyledHeaderTopNavLi>
+        </StyledHeaderTopNav>
       </StyledHeaderTop>
 
       <StyledHeaderCenter>
-        <StyledHeaderCenterLogo></StyledHeaderCenterLogo>
+        <StyledHeaderCenterLogo>
+          
+        </StyledHeaderCenterLogo>
         <StyledHeaderCenterSearch></StyledHeaderCenterSearch>
         <StyledHeaderCenterNav></StyledHeaderCenterNav>
       </StyledHeaderCenter>
