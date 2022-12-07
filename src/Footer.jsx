@@ -19,22 +19,42 @@ const StyledFooterTop = styled.div`
 `;
 const StyledFooterTopContent = styled.div`
   width: 980px;
+  height: 676.4px;
   margin: 0 auto;
   padding: 40px 20px;
 `;
 const StyledFooterTopContentFirst = styled.div`
-  height: 676.4px;
+  height: 80%;
+  width: 980px;
   margin: 0;
+  padding: 1px;
+  box-sizing: border-box;
+  border: solid 2px black;
+  display:flex;
+`;
+const StyledFooterTopContent1 = styled.div`
+  height: 100%;
+  width: 50%;
+  margin: 2px;
+  padding: 0;
+  box-sizing: border-box;
+  border: solid 2px black;
+`;
+const StyledFooterTopContent2 = styled.div`
+  height: 100%;
+  width: 50%;
+  margin: 2px;
   padding: 0;
   box-sizing: border-box;
   border: solid 2px black;
 `;
 const StyledFooterTopContentLast = styled.div`
-  position: relative;
   margin-top: 40px;
+  width: 980px;
+
   box-sizing: border-box;
   border: solid 2px black;
-  height: 100px;
+  height: 20%;
 `;
 /* ---------------- center ---------------- */
 const StyledFooterCenter = styled.div`
@@ -50,6 +70,8 @@ const StyledFooterCenterContent = styled.div`
   height: 37.8px;
   margin: 0 auto;
   padding: 21px 20px 0;
+  box-sizing: border-box;
+  border: solid 2px black;
 `;
 /* ---------------- bottom ---------------- */
 const StyledFooterBottom = styled.div`
@@ -66,6 +88,8 @@ const StyledFooterBottomContent = styled.div`
   width: 1020px;
   height: 71px;
   margin: 0 auto;
+  box-sizing: border-box;
+  border: solid 2px black;
 `;
 
 
@@ -77,7 +101,10 @@ const Footer = () => {
 
       <StyledFooterTop>
         <StyledFooterTopContent>
-          <StyledFooterTopContentFirst></StyledFooterTopContentFirst>
+          <StyledFooterTopContentFirst>
+            <StyledFooterTopContent1></StyledFooterTopContent1>
+            <StyledFooterTopContent2></StyledFooterTopContent2>
+          </StyledFooterTopContentFirst>
           <StyledFooterTopContentLast></StyledFooterTopContentLast>
         </StyledFooterTopContent>
       </StyledFooterTop>
