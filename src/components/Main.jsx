@@ -10,10 +10,12 @@ const StyledMain = styled.main`
   position: relative;
 `;
 const StyledMainContent = styled.div`
-  width: 980px;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
 `;
 const StyledMainContentOuter = styled.div`
   width: 980px;
