@@ -132,9 +132,17 @@ const StyledHeaderBottomNavLi = styled.li`
   margin: 0 100px;
   padding: 0;
   list-style: none;
-  display: inline;
+  display: inline-block;
   margin: 0 70px;
 `;
+const StyledHeaderBottomIcon = styled.div`
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
 
 
 /* ---------------- jsx ---------------- */
@@ -170,10 +178,10 @@ const Header = () => {
 
       <StyledHeaderBottom>
         <StyledHeaderBottomNav> 
-          <StyledHeaderBottomNavLi>< FaCrown/> 人気ランキング</StyledHeaderBottomNavLi>
-          <StyledHeaderBottomNavLi>< GiPresent /> お礼品から探す</StyledHeaderBottomNavLi>
-          <StyledHeaderBottomNavLi>< BiMap /> 地域から探す</StyledHeaderBottomNavLi>
-          <StyledHeaderBottomNavLi>< BsFillArchiveFill /> 特集・キャンペーン</StyledHeaderBottomNavLi>
+          <StyledHeaderBottomNavLi><StyledHeaderBottomIcon><FaCrown />&nbsp;&nbsp;人気ランキング</StyledHeaderBottomIcon></StyledHeaderBottomNavLi>
+          <StyledHeaderBottomNavLi><StyledHeaderBottomIcon>< GiPresent />&nbsp;&nbsp;お礼品から探す</StyledHeaderBottomIcon></StyledHeaderBottomNavLi>
+          <StyledHeaderBottomNavLi><StyledHeaderBottomIcon>< BiMap />&nbsp;&nbsp;地域から探す</StyledHeaderBottomIcon></StyledHeaderBottomNavLi>
+          <StyledHeaderBottomNavLi><StyledHeaderBottomIcon>< BsFillArchiveFill />&nbsp;&nbsp;特集・キャンペーン</StyledHeaderBottomIcon></StyledHeaderBottomNavLi>
         </StyledHeaderBottomNav>
       </StyledHeaderBottom>
 
