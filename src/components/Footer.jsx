@@ -233,6 +233,9 @@ const Footer = () => {
           <StyledFooterFirstPurpose2>
             <StyledFooterPurposeTitle>初めての方へ</StyledFooterPurposeTitle>
               <StyledFooterFirstGuidel>
+                
+        {/* <-------------------------------無理やりpxで実装している箇所なので後で修正をする> */}
+
                 <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>ふるさと納税とは</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
                 <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>控除額シミュレーション</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
                 <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>ワンストップ特例制度とは</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
