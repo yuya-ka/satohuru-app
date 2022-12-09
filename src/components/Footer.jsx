@@ -89,8 +89,7 @@ const StyledFooterFirstPurpose2 = styled.div`
 const StyledFooterFirstGuidel = styled.ul`
   height: 250px;
   margin: 0;
-  padding: 0;
-  padding-top: 6px;
+  padding: 6px 0 0 0;
   list-style: none;
   display: block;
 `;
@@ -113,9 +112,8 @@ const StyledFooterFirstGuidelLiiA = styled.a`
 `;
 const StyledFooterFirstGuidel2 = styled.div`
   height: 60px;
-  margin: 0;
+  margin: 25px 0 0 0;
   padding: 0;
-  margin-top: 25px;
   display: block;
 `;
 const StyledFooterFirstGuidel2App = styled.div`
@@ -135,9 +133,8 @@ const StyledFooterFirstGuidel2App2 = styled.div`
   justify-content: space-between;
 `;
 const StyledFooterFirstGuidel2App3 = styled.div`
-  margin: 0;
+  margin: 0 0 0 75px;
   padding: 0;
-  margin-left: 75px;
   display: inline-block;
 `;
 /* ---------------- center ---------------- */
@@ -157,12 +154,11 @@ const StyledFooterCenterContent = styled.div`
   display: flex;
   justify-content: center;
 `;
-const StyledFooterCenterContentNav = styled.ul`
+const StyledFooterCenterContentNav = styled.div`
   margin: 0;
   padding: 0;
-  list-style: none;
 `;
-const StyledFooterCenterContentNavLi = styled.li`
+const StyledFooterCenterContentNavLi = styled.div`
   margin: 0;
   padding: 0;
   display: inline;
