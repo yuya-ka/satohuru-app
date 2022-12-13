@@ -248,11 +248,25 @@ const Section4Text = styled.p`
 
 /* <-------------------------------後で使用------------------------> */
 
-// const MainCenterItem = styled.div`
-//   height: 100%;
-//   box-sizing: border-box;
-//   border: solid 2px black;
-// `;
+const MainCenterWrap = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+`;
+const MainCenterContainer = styled.div`
+  width: 730px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+`;
+const Group = styled.div`
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+`;
 /* ---------------- bottom ---------------- */
 // const MainBottom = styled.div`
 //   width: 100%;
@@ -400,9 +414,19 @@ const Main = () => {
               </MainSidebarColumn>
             </MainSidebar>
 
-            {/* <MainCenterItem></MainCenterItem> */}
+{/* --------------------- コンテント ---------------------- */}
+
+            <MainCenterWrap>
+              <MainCenterContainer>
+                <Group>
+                  
+                </Group>
+              </MainCenterContainer>
+            </MainCenterWrap>
 
           </MainCenter>
+
+{/* --------------------- コンテント ---------------------- */}
 
           {/* <MainBottom>
           </MainBottom> */}
