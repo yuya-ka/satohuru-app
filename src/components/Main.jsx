@@ -9,6 +9,10 @@ import img5 from "../images/bnr_satofull_app.webp"
 import img6 from "../images/bnr_special_myhometown.webp"
 import img7 from "../images/bnr_philosophy.webp"
 
+import item1 from "../images/1221552_00_1670457676.webp"
+import str from "../images/pic_star45.png"
+
+
 /* -------------------- リスト -------------------- */
 const category = ['肉', '魚介・海産物', '米・パン', '果物・フルーツ', '野菜',
   '卵・乳製品', '酒・アルコール', '飲料・ドリンク', '菓子・スイーツ', '麺',
@@ -246,7 +250,7 @@ const Section4Text = styled.p`
 `;
 
 
-/* <-------------------------------後で使用------------------------> */
+
 
 const MainCenterWrap = styled.div`
   width: 100%;
@@ -262,11 +266,100 @@ const MainCenterContainer = styled.div`
   float: left;
 `;
 const Group = styled.div`
-  width: 100%;
-  height: 200px;
+  width: auto;
+  height: auto;
   margin: 0;
   padding: 0;
 `;
+
+const GroupTitle = styled.div`
+  width: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+const TitleText = styled.h2`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const TitleLink = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+
+const GroupContainer = styled.div`
+  width: 730px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+`;
+const ContainerOuter = styled.div`
+  width: auto;
+  height: 316px;
+  margin: 0;
+  padding: 0;
+`;
+const ContainerInner = styled.div`
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+`;
+const Item = styled.div`
+  width: 144px;
+  height: 100%;
+  margin: 0 15px 0 0;
+  padding: 0;
+`;
+const ItemSet = styled.div`
+  width: 144px;
+  margin: 10px 0 0 0;
+  padding: 0;
+`;
+const SetName = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 700;
+`;
+const SetCity = styled.p`
+  width: auto;
+  margin: 3px 0 0 0;
+  padding: 0;
+  font-size: 10px;
+`;
+const SetShow = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const SetPrice = styled.p`
+  width: auto;
+  margin: 3px 0 0 0;
+  padding: 0;
+  font-size: 13px;
+`;
+const SetText = styled.p`
+  width: auto;
+  margin: 3px 0 0 0;
+  padding: 0;
+  font-size: 10px;
+`;
+const SetReview = styled.div`
+  width: auto;
+  margin: 3px 0 0 0;
+  padding: 0;
+`;
+
+/* <-------------------------------後で使用------------------------> */
 /* ---------------- bottom ---------------- */
 // const MainBottom = styled.div`
 //   width: 100%;
@@ -419,7 +512,86 @@ const Main = () => {
             <MainCenterWrap>
               <MainCenterContainer>
                 <Group>
-                  
+
+                  <GroupTitle>
+                    <TitleText>ふるさと納税人気急上昇ランキング</TitleText>
+                    <TitleLink>もっと見る</TitleLink>
+                  </GroupTitle>
+
+                  <GroupContainer>
+                    <ContainerOuter>
+                      <ContainerInner>
+
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        
+
+                      </ContainerInner>
+                    </ContainerOuter>
+                  </GroupContainer>
+
                 </Group>
               </MainCenterContainer>
             </MainCenterWrap>
