@@ -12,6 +12,17 @@ import img7 from "../images/bnr_philosophy.webp"
 import item1 from "../images/1221552_00_1670457676.webp"
 import str from "../images/pic_star45.png"
 
+import recommend1 from "../images/bnr_special_sweets_coffee.jpg"
+import recommend2 from "../images/bnr_special_daily_necessities.webp"
+import recommend3 from "../images/bnr_special_fruits.webp"
+import recommend4 from "../images/bnr_special_milk-smile-project.webp"
+import recommend5 from "../images/bnr_special_kaden.webp"
+import recommend6 from "../images/bnr_special_wakeari_oen.webp"
+
+import recommend7 from "../images/bnr_oenkifu_202209_typhoon-228_120.jpg"
+import recommend8 from "../images/bnr_oenkifu_202207_typhoon-228_120.jpg"
+import recommend9 from "../images/bnr_oenkifu_202203_fukushima-228_120.jpg"
+
 
 /* -------------------- リスト -------------------- */
 const category = ['肉', '魚介・海産物', '米・パン', '果物・フルーツ', '野菜',
@@ -30,9 +41,9 @@ const newRegion = region.map(val => {
 /* ---------------- css ---------------- */
 const StyledMain = styled.main`
   min-width: 1020px;
-  margin: 0;
-  padding-bottom: 50px;
   height: auto;
+  margin: 0;
+  padding: 0;
   background-color: #fff;
 `;
 const MainContent = styled.div`
@@ -359,15 +370,132 @@ const SetReview = styled.div`
   padding: 0;
 `;
 
-/* <-------------------------------後で使用------------------------> */
+/* <-------------------------------おすすめ------------------------> */
+const Recommendation = styled.div`
+  width: auto;
+  margin: 35px 0 0 0;
+  padding: 35px 0 0 0;
+  border-top: 1px solid #ccc;
+`;
+const RecommendationTitle = styled.div`
+  width: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+const RecommendationText = styled.h2`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const RecommendationLink = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+
+const Recommend = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const RecommendUl = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+`;
+const RecommendLi = styled.div`
+  width: auto;
+  margin: 0 15px 15px 0;
+  padding: 0;
+`;
+
+
 /* ---------------- bottom ---------------- */
-// const MainBottom = styled.div`
-//   width: 100%;
-//   height: 20%;
-//   box-sizing: border-box;
-//   border: solid 2px black;
-//   padding: 2px;
-// `;
+const MainBottom = styled.div`
+  width: auto;
+  margin: 45px 0 0 0;
+  padding: 45px 0 0 0;
+  border-top: 1px solid #ccc;
+`;
+const BottomContainer = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const ContainerLeft = styled.div`
+  width: 460px;
+  margin: 0;
+  padding: 0;
+  float: left;
+`;
+const ContainerTitle = styled.div`
+  width: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+const ContainerTitleText = styled.h2`
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+`;
+const ContainerTitleBtn = styled.button`
+  width: auto;
+  margin: 0;
+  padding: 4px 10px;
+  background-color: #995a29;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+`;
+const ContainerNews = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const ContainerNewsUl = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const ContainerNewsLi = styled.div`
+  width: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 13px;
+  display: flex;
+`;
+const NewsDate = styled.p`
+  width: 400px;
+  margin: 0;
+  padding: 0;
+`;
+const NewsText = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+
+const ContainerRight = styled.div`
+  width: 460px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border: solid 1px black;
+  float: right;
+`;
 
 
 /* ---------------- jsx ---------------- */
@@ -511,17 +639,15 @@ const Main = () => {
 
             <MainCenterWrap>
               <MainCenterContainer>
-                <Group>
 
+                <Group>
                   <GroupTitle>
-                    <TitleText>ふるさと納税人気急上昇ランキング</TitleText>
+                    <TitleText>ふるさと納税 人気急上昇ランキング</TitleText>
                     <TitleLink>もっと見る</TitleLink>
                   </GroupTitle>
-
                   <GroupContainer>
                     <ContainerOuter>
                       <ContainerInner>
-
                         <Item>
                           <img src={item1} alt='item' height='144px' width='144px' />
                           <ItemSet>
@@ -534,7 +660,6 @@ const Main = () => {
                             </SetShow>
                           </ItemSet>
                         </Item>
-
                         <Item>
                           <img src={item1} alt='item' height='144px' width='144px' />
                           <ItemSet>
@@ -547,7 +672,6 @@ const Main = () => {
                             </SetShow>
                           </ItemSet>
                         </Item>
-
                         <Item>
                           <img src={item1} alt='item' height='144px' width='144px' />
                           <ItemSet>
@@ -560,7 +684,6 @@ const Main = () => {
                             </SetShow>
                           </ItemSet>
                         </Item>
-
                         <Item>
                           <img src={item1} alt='item' height='144px' width='144px' />
                           <ItemSet>
@@ -573,7 +696,6 @@ const Main = () => {
                             </SetShow>
                           </ItemSet>
                         </Item>
-
                         <Item>
                           <img src={item1} alt='item' height='144px' width='144px' />
                           <ItemSet>
@@ -586,22 +708,253 @@ const Main = () => {
                             </SetShow>
                           </ItemSet>
                         </Item>
-                        
-
                       </ContainerInner>
                     </ContainerOuter>
                   </GroupContainer>
-
                 </Group>
+
+                <Group>
+                  <GroupTitle>
+                    <TitleText>ふるさと納税 総合人気ランキング</TitleText>
+                    <TitleLink>もっと見る</TitleLink>
+                  </GroupTitle>
+                  <GroupContainer>
+                    <ContainerOuter>
+                      <ContainerInner>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                      </ContainerInner>
+                    </ContainerOuter>
+                  </GroupContainer>
+                </Group>
+
+                <Group>
+                  <GroupTitle>
+                    <TitleText>定期便の人気ランキング</TitleText>
+                    <TitleLink>もっと見る</TitleLink>
+                  </GroupTitle>
+                  <GroupContainer>
+                    <ContainerOuter>
+                      <ContainerInner>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                        <Item>
+                          <img src={item1} alt='item' height='144px' width='144px' />
+                          <ItemSet>
+                            <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
+                            <SetCity>山梨県山梨市</SetCity>
+                            <SetShow>
+                              <SetPrice>寄付金額</SetPrice>
+                              <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+                              <SetReview><img src={str} alt='item' height='13px' width='82px' /></SetReview>
+                            </SetShow>
+                          </ItemSet>
+                        </Item>
+                      </ContainerInner>
+                    </ContainerOuter>
+                  </GroupContainer>
+                </Group>
+
+{/* --------------------- おすすめ ---------------------- */}
+
+                <Recommendation>
+                  <RecommendationTitle>
+                    <RecommendationText>おすすめ特集</RecommendationText>
+                    <RecommendationLink>もっと見る</RecommendationLink>
+                  </RecommendationTitle>
+
+                  <Recommend>
+                    <RecommendUl>
+                      <RecommendLi><img src={recommend1} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                      <RecommendLi><img src={recommend2} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                      <RecommendLi><img src={recommend3} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                      <RecommendLi><img src={recommend4} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                      <RecommendLi><img src={recommend5} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                      <RecommendLi><img src={recommend6} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                    </RecommendUl>
+                  </Recommend>
+
+                </Recommendation>
+
+                <Recommendation>
+                  <RecommendationTitle>
+                    <RecommendationText>おすすめコンテンツ</RecommendationText>
+                    <RecommendationLink>もっと見る</RecommendationLink>
+                  </RecommendationTitle>
+
+                  <Recommend>
+                    <RecommendUl>
+                      <RecommendLi><img src={recommend1} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                      <RecommendLi><img src={recommend2} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                      <RecommendLi><img src={recommend3} alt='recommend' height='120px' width='228px' /></RecommendLi>
+                    </RecommendUl>
+                  </Recommend>
+
+                </Recommendation>
+
+                <Recommendation>
+                  <RecommendationTitle>
+                    <RecommendationText>災害支援寄付</RecommendationText>
+                    <RecommendationLink>もっと見る</RecommendationLink>
+                  </RecommendationTitle>
+
+                  <Recommend>
+                    <RecommendUl>
+                      <RecommendLi><img src={recommend7} alt='recommend' height='120px' width='228px' /><p>令和4年9月台風・豪雨</p></RecommendLi>
+                      <RecommendLi><img src={recommend8} alt='recommend' height='120px' width='228px' /><p>令和4年7・8月台風・豪雨</p></RecommendLi>
+                      <RecommendLi><img src={recommend9} alt='recommend' height='120px' width='228px' /><p>令和4年3月福島県沖地震</p></RecommendLi>
+                    </RecommendUl>
+                  </Recommend>
+
+                </Recommendation>
+
               </MainCenterContainer>
             </MainCenterWrap>
 
           </MainCenter>
 
-{/* --------------------- コンテント ---------------------- */}
+          <MainBottom>
+            <BottomContainer>
+              <ContainerLeft>
+                <ContainerTitle>
+                  <ContainerTitleText>さとふるNEWS</ContainerTitleText>
+                  <ContainerTitleBtn>一覧を見る</ContainerTitleBtn>
+                </ContainerTitle>
 
-          {/* <MainBottom>
-          </MainBottom> */}
+                <ContainerNews>
+                  <ContainerNewsUl>
+                    <ContainerNewsLi>
+                      <NewsDate>2022年12月12日</NewsDate>
+                      <NewsText>
+[プレスリリース] ワンストップ特例制度の申請がオンラインで完結する「さとふるアプリdeワンストップ申請」開始約2か月半で寄付控除申請数が63万件以上に ～サービス対象自治体は849自治体に～</NewsText>
+                    </ContainerNewsLi>
+                    <ContainerNewsLi>
+                      <NewsDate>2022年12月12日</NewsDate>
+                      <NewsText>
+[プレスリリース] ワンストップ特例制度の申請がオンラインで完結する「さとふるアプリdeワンストップ申請」開始約2か月半で寄付控除申請数が63万件以上に ～サービス対象自治体は849自治体に～</NewsText>
+                    </ContainerNewsLi>
+                    <ContainerNewsLi>
+                      <NewsDate>2022年12月12日</NewsDate>
+                      <NewsText>
+[プレスリリース] ワンストップ特例制度の申請がオンラインで完結する「さとふるアプリdeワンストップ申請」開始約2か月半で寄付控除申請数が63万件以上に ～サービス対象自治体は849自治体に～</NewsText>
+                    </ContainerNewsLi>
+                    <ContainerNewsLi>
+                      <NewsDate>2022年12月12日</NewsDate>
+                      <NewsText>
+[プレスリリース] ワンストップ特例制度の申請がオンラインで完結する「さとふるアプリdeワンストップ申請」開始約2か月半で寄付控除申請数が63万件以上に ～サービス対象自治体は849自治体に～</NewsText>
+                    </ContainerNewsLi>
+                  </ContainerNewsUl>
+                </ContainerNews>
+              </ContainerLeft>
+              <ContainerRight>
+
+              </ContainerRight>
+            </BottomContainer>
+          </MainBottom>
         </MainContentInner>
         </MainContentOuter>
       </MainContent>
