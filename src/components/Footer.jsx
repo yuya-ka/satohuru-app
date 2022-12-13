@@ -59,23 +59,23 @@ const StyledFooterCategoryTitle = styled.div`
 const StyledFooterCategoryList = styled.div`
   padding: 0 14px;
 `;
-const StyledFooterCategoryListA = styled.a`
+const StyledFooterCategoryListLink = styled.a`
   margin: 0;
   padding: 0;
   line-height: 2;
   white-space: wrap;
 `;
 /* -------------------- リスト -------------------- */
-const arry = ['肉', '魚介・海産物', '米・パン', '果物・フルーツ', '野菜',
+const category = ['肉', '魚介・海産物', '米・パン', '果物・フルーツ', '野菜',
   '卵・乳製品', '酒・アルコール', '飲料・ドリンク', '菓子・スイーツ', '麺',
   '惣菜・加工品', '調味料', '家電製品', '旅行券・チケット', '雑貨・日常品',
   '美容', '装飾品・工芸品', '花・観葉植物', 'その他', 'スペシャル', '定期便'];
-const newArry = arry.map(val => {
+const newCategory = category.map(val => {
   return val;
 });
-const arry2 = ['北海道地方', '東北地方', '関東地方', '中部地方', '近畿地方',
+const region = ['北海道地方', '東北地方', '関東地方', '中部地方', '近畿地方',
   '中国地方', '四国地方', '九州地方'];
-const newArry2 = arry2.map(val => {
+const newRegion = region.map(val => {
   return val;
 });
 /* -------------------- /リスト -------------------- */
@@ -106,7 +106,7 @@ const StyledFooterFirstGuidelLi = styled.li`
   align-items: center;
   background-color: #fff;
 `;
-const StyledFooterFirstGuidelLiiA = styled.a`
+const StyledFooterFirstGuidelLiLink = styled.a`
   margin: 0;
   padding: 0;
 `;
@@ -203,21 +203,21 @@ const Footer = () => {
             <StyledFooterCategory>
               <StyledFooterCategoryTitle>お礼品から探す</StyledFooterCategoryTitle>
               <StyledFooterCategoryList>
-                <StyledFooterCategoryListA>{newArry}</StyledFooterCategoryListA>
+                <StyledFooterCategoryListLink>{newCategory}</StyledFooterCategoryListLink>
               </StyledFooterCategoryList>
             </StyledFooterCategory>
 
             <StyledFooterCategory>
               <StyledFooterCategoryTitle>ランキングから探す</StyledFooterCategoryTitle>
               <StyledFooterCategoryList>
-                <StyledFooterCategoryListA>{newArry}</StyledFooterCategoryListA>
+                <StyledFooterCategoryListLink>{newCategory}</StyledFooterCategoryListLink>
               </StyledFooterCategoryList>
             </StyledFooterCategory>
 
             <StyledFooterCategory>
               <StyledFooterCategoryTitle>地域から探す</StyledFooterCategoryTitle>
               <StyledFooterCategoryList>
-                <StyledFooterCategoryListA>{newArry2}</StyledFooterCategoryListA>
+                <StyledFooterCategoryListLink>{newRegion}</StyledFooterCategoryListLink>
               </StyledFooterCategoryList>
             </StyledFooterCategory>
 
@@ -236,16 +236,16 @@ const Footer = () => {
                 
         {/* <-------------------------------無理やりpxで実装している箇所なので後で修正をする> */}
 
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>ふるさと納税とは</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>控除額シミュレーション</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>ワンストップ特例制度とは</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>初めての確定申告</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>ふるさと納税の用語集</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>会員登録</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>よくあるご質問</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>お問い合わせ</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>さとふる通信バックナンバー</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
-                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiiA>さとふるの特徴</StyledFooterFirstGuidelLiiA></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>ふるさと納税とは</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>控除額シミュレーション</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>ワンストップ特例制度とは</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>初めての確定申告</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>ふるさと納税の用語集</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>会員登録</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>よくあるご質問</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>お問い合わせ</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>さとふる通信バックナンバー</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
+                <StyledFooterFirstGuidelLi><StyledFooterFirstGuidelLiLink>さとふるの特徴</StyledFooterFirstGuidelLiLink></StyledFooterFirstGuidelLi>
               </StyledFooterFirstGuidel>
 
               <StyledFooterFirstGuidel2>

@@ -83,7 +83,7 @@ const SectionLi = styled.div`
   margin: 0 0 0 10px;
   padding: 0;
 `;
-const SectionA = styled.a`
+const SectionLink = styled.a`
   margin: 0;
   padding: 0;
 `;
@@ -244,6 +244,10 @@ const Section4Text = styled.p`
   padding: 0 20px;
   font-size: 14px;
 `;
+
+
+/* <-------------------------------後で使用------------------------> */
+
 // const MainCenterItem = styled.div`
 //   height: 100%;
 //   box-sizing: border-box;
@@ -271,24 +275,24 @@ const Main = () => {
             <MainSectionWord>
               <MainSectionTitle>注目ワード</MainSectionTitle>
               <MainSectionUl>
-                <SectionLi><SectionA>
+                <SectionLi><SectionLink>
                   PayPay商品券
-                </SectionA></SectionLi>
-                <SectionLi><SectionA>
+                </SectionLink></SectionLi>
+                <SectionLi><SectionLink>
                   PayPayジャンボ
-                </SectionA></SectionLi>
-                <SectionLi><SectionA>
+                </SectionLink></SectionLi>
+                <SectionLi><SectionLink>
                   年内に届く
-                </SectionA></SectionLi>
-                <SectionLi><SectionA>
+                </SectionLink></SectionLi>
+                <SectionLi><SectionLink>
                   さとふる限定
-                </SectionA></SectionLi>
-                <SectionLi><SectionA>
+                </SectionLink></SectionLi>
+                <SectionLi><SectionLink>
                   コロナ対策支援
-                </SectionA></SectionLi>
-                <SectionLi><SectionA>
+                </SectionLink></SectionLi>
+                <SectionLi><SectionLink>
                   ハンバーグ
-                </SectionA></SectionLi>
+                </SectionLink></SectionLi>
               </MainSectionUl>
             </MainSectionWord>
           </MainSection>
