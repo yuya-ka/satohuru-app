@@ -370,6 +370,92 @@ const SetReview = styled.div`
   padding: 0;
 `;
 
+
+
+
+const SimulationArea = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const SimulationFrame = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 15px;
+  background-color: #FFFFDF;
+  display: flex;
+`;
+const SelectBox = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0 5px;
+`;
+const Label = styled.p`
+  width: auto;
+  margin: 0 0 8px 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+`;
+const Select = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const MoneySelectArea = styled.select`
+  width: 120px;
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: solid #aaa 1px;
+`;
+
+const ResultArea = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const ResultBox = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const Result = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const ResultInput = styled.input`
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 2px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 3px solid #7aa82e;
+  color: #7aa82e;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+`;
+
+const ResultRear = styled.p`
+  width: auto;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #7aa82e;
+
+`;
+
+
+
 /* <-------------------------------おすすめ------------------------> */
 const Recommendation = styled.div`
   width: auto;
@@ -490,11 +576,80 @@ const NewsText = styled.p`
 
 const ContainerRight = styled.div`
   width: 460px;
-  height: 200px;
+  height: 370px;
   margin: 0;
   padding: 0;
-  border: solid 1px black;
   float: right;
+`;
+const ContainerRevue = styled.div`
+  width: auto;
+  height: 330px;
+  margin: 0;
+  padding: 0;
+`;
+const ContainerRevueBox = styled.div`
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+`;
+const RevueItem = styled.div`
+  width: auto;
+  height: 100%;
+  margin: 0 20px 0 0;
+  padding: 0;
+`;
+const Revue = styled.div`
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+`;
+const RevueLi = styled.div`
+  width: auto;
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-size: 13px;
+`;
+const RevueLiHead = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+`;
+const RevueDate = styled.p`
+  width: 150px;
+  margin: 0;
+  padding: 0;
+`;
+const RevueRate = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+
+const RevueLiMain = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const RevueLiName = styled.p`
+  width: auto;
+  margin: 5px 0 0 0;
+  padding: 0;
+`;
+const RevueLiText = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+
+const Scroll = styled.div`
+  width: auto;
+  margin: 0;
+  padding: 0;
 `;
 
 
@@ -859,6 +1014,38 @@ const Main = () => {
                   </GroupContainer>
                 </Group>
 
+
+                <Recommendation>
+                  <RecommendationTitle>
+                    <RecommendationText>控除上限額シミュレーション</RecommendationText>
+                    <RecommendationLink>詳細はこちら</RecommendationLink>
+                  </RecommendationTitle>
+                  <SimulationArea>
+                    <SimulationFrame>
+                      <SelectBox>
+                        <Label>あなたの給与収入</Label>
+                        <Select>
+                          <MoneySelectArea></MoneySelectArea>
+                        </Select>
+                      </SelectBox>
+                      <SelectBox>
+                        <Label>あなたの家族構成</Label>
+                        <Select>
+                          <MoneySelectArea></MoneySelectArea>
+                        </Select>
+                      </SelectBox>
+                    </SimulationFrame>
+                    <ResultArea>
+                      <ResultBox>
+                        <Result>
+                          <ResultInput type='text' value='給与収入・家族構成を選択してください'></ResultInput>
+                        </Result>
+                        <ResultRear>までのふるさと納税が控除の目安となります。</ResultRear>
+                      </ResultBox>
+                    </ResultArea>
+                  </SimulationArea>
+                </Recommendation>
+
 {/* --------------------- おすすめ ---------------------- */}
 
                 <Recommendation>
@@ -950,9 +1137,86 @@ const Main = () => {
                   </ContainerNewsUl>
                 </ContainerNews>
               </ContainerLeft>
-              <ContainerRight>
 
+
+              <ContainerRight>
+                <ContainerTitle>
+                  <ContainerTitleText>評価の高い新着お礼品レビュー・口コミ</ContainerTitleText>
+                  <ContainerTitleBtn>一覧を見る</ContainerTitleBtn>
+                </ContainerTitle>
+                <ContainerRevue>
+                  <ContainerRevueBox>
+                    <RevueItem>
+                      <Revue>
+
+                        <RevueLi>
+                          <RevueLiHead>
+                            <RevueDate>2022年12月10日</RevueDate>
+                            <RevueRate>評価：</RevueRate>
+                            <img src={str} alt='item' height='13px' width='82px' />
+                          </RevueLiHead>
+                          <RevueLiMain>
+                            <RevueLiName>オホーツク産ホタテ玉冷大(1kg)</RevueLiName>
+                            <RevueLiText>味もサイズも大満足でした！！</RevueLiText>
+                          </RevueLiMain>
+                        </RevueLi>
+
+                        <RevueLi>
+                          <RevueLiHead>
+                            <RevueDate>2022年12月10日</RevueDate>
+                            <RevueRate>評価：</RevueRate>
+                            <img src={str} alt='item' height='13px' width='82px' />
+                          </RevueLiHead>
+                          <RevueLiMain>
+                            <RevueLiName>オホーツク産ホタテ玉冷大(1kg)</RevueLiName>
+                            <RevueLiText>味もサイズも大満足でした！！</RevueLiText>
+                          </RevueLiMain>
+                        </RevueLi>
+
+                        <RevueLi>
+                          <RevueLiHead>
+                            <RevueDate>2022年12月10日</RevueDate>
+                            <RevueRate>評価：</RevueRate>
+                            <img src={str} alt='item' height='13px' width='82px' />
+                          </RevueLiHead>
+                          <RevueLiMain>
+                            <RevueLiName>オホーツク産ホタテ玉冷大(1kg)</RevueLiName>
+                            <RevueLiText>味もサイズも大満足でした！！</RevueLiText>
+                          </RevueLiMain>
+                        </RevueLi>
+
+                        <RevueLi>
+                          <RevueLiHead>
+                            <RevueDate>2022年12月10日</RevueDate>
+                            <RevueRate>評価：</RevueRate>
+                            <img src={str} alt='item' height='13px' width='82px' />
+                          </RevueLiHead>
+                          <RevueLiMain>
+                            <RevueLiName>オホーツク産ホタテ玉冷大(1kg)</RevueLiName>
+                            <RevueLiText>味もサイズも大満足でした！！</RevueLiText>
+                          </RevueLiMain>
+                        </RevueLi>
+
+                        <RevueLi>
+                          <RevueLiHead>
+                            <RevueDate>2022年12月10日</RevueDate>
+                            <RevueRate>評価：</RevueRate>
+                            <img src={str} alt='item' height='13px' width='82px' />
+                          </RevueLiHead>
+                          <RevueLiMain>
+                            <RevueLiName>オホーツク産ホタテ玉冷大(1kg)</RevueLiName>
+                            <RevueLiText>味もサイズも大満足でした！！</RevueLiText>
+                          </RevueLiMain>
+                        </RevueLi>
+
+                      </Revue>
+                    </RevueItem>
+                    <Scroll></Scroll>
+                  </ContainerRevueBox>
+                </ContainerRevue>
               </ContainerRight>
+
+
             </BottomContainer>
           </MainBottom>
         </MainContentInner>
