@@ -10,11 +10,11 @@ import logo2 from "../../images/logo_privacy.webp"
 
 
 const PurposeFirst = styled.div`
-  width: 470px;
+  width: 450px;
   height: 100%;
   margin: 0;
   padding: 0;
-  margin-left: 20px;
+  margin-left: 40px;
 `;
 const PurposeTitle = styled.p`
   margin: 0;
@@ -34,18 +34,20 @@ const GuideUl = styled.div`
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 const GuideLi = styled.div`
   width: 220px;
   height: 40px;
-  margin: 5px 7px;
+  margin: 0;
   padding: 0;
   font-size: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  float: right;
 `;
 
 const AppBox = styled.div`

@@ -23,13 +23,13 @@ const CategoryTitle = styled.div`
   padding: 0;
 `;
 const CategoryList = styled.div`
+  margin: 0;
   padding: 0 14px;
+  list-style: none;
 `;
 const ListLink = styled.a`
   margin: 0;
   padding: 0;
-  line-height: 2;
-  white-space: wrap;
 `;
 
 const category = ['肉', '魚介・海産物', '米・パン', '果物・フルーツ', '野菜',
@@ -37,12 +37,12 @@ const category = ['肉', '魚介・海産物', '米・パン', '果物・フル�
   '惣菜・加工品', '調味料', '家電製品', '旅行券・チケット', '雑貨・日常品',
   '美容', '装飾品・工芸品', '花・観葉植物', 'その他', 'スペシャル', '定期便'];
 const newCategory = category.map(val => {
-  return val;
+  return <li style={{display: 'flex'}} key={val.toString()}>{val}</li>;
 });
 const region = ['北海道地方', '東北地方', '関東地方', '中部地方', '近畿地方',
   '中国地方', '四国地方', '九州地方'];
 const newRegion = region.map(val => {
-  return val;
+  return <li style={{margin: '0'}} key={val.toString()}>{val}</li>;
 });
 
 
