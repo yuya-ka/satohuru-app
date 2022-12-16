@@ -28,10 +28,10 @@ const ContainerTitleBtn = styled.button`
 `;
 
 
-const BottomTitle = () => {
+const BottomTitle = ({title}) => {
   return (
     <ContainerTitle>
-      <ContainerTitleText>さとふるNEWS</ContainerTitleText>
+      <ContainerTitleText>{`${title}`}</ContainerTitleText>
       <ContainerTitleBtn>一覧を見る</ContainerTitleBtn>
     </ContainerTitle>
   );

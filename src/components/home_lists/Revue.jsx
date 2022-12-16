@@ -44,10 +44,18 @@ const Scroll = styled.div`
 `;
 
 
+const titleName= [
+  {right: '評価の高い新着お礼品レビュー・口コミ'}
+];
+
 const Revue = () => {
   return (
     <ContainerRight>
-      <BottomTitle />
+      {titleName.map((title) => {
+        return (
+          <BottomTitle title={title.right}/>
+        );
+      })}
 
       <ContainerRevue>
         <ContainerRevueBox>

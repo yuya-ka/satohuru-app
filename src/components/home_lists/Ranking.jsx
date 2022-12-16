@@ -33,8 +33,6 @@ const ContainerInner = styled.div`
 
 
 const Ranking = (props) => {
-  console.log(props.rankingData.items);
-  
   return (
     <Group>
       <Title title={props.rankingData.title}/>

@@ -4,6 +4,7 @@ import Ranking from "./home_lists/Ranking";
 import Sidebar from "./Sidebar"
 import HomeVisual from "./HomeVisual";
 import Recommend from "./home_lists/Recommend";
+import {Recommend2} from "./home_lists/Recommend";
 import News from "./home_lists/News";
 import Revue from "./home_lists/Revue";
 import Simulation from "./home_lists/Simulation";
@@ -80,6 +81,10 @@ const rankingsData = [
   {title: 'ふるさと納税 新着お礼品' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]}
 ];
 
+const recommendTitles= [
+  {title1: 'おすすめ特集', title2: 'おすすめコンテンツ'}
+];
+
 
 const Main = () => {
   return (
@@ -104,8 +109,19 @@ const Main = () => {
 
                 <Simulation />
 
-                <Recommend />
-                <Recommend />
+
+                {recommendTitles.map((recommendTitle) => {
+                  return (
+                    <>
+                    <Recommend title={recommendTitle}/>
+                    <Recommend2 title={recommendTitle}/>
+                    </>
+                  );
+                })}
+
+
+
+
 
               </MainCenterContainer>
             </MainCenterWrap>

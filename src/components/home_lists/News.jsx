@@ -25,10 +25,19 @@ const ContainerNewsUl = styled.div`
 `;
 
 
+const titleName= [
+  {left: 'さとふるNEWS'}
+];
+
+
 const News = () => {
   return (
     <ContainerLeft>
-      <BottomTitle />
+      {titleName.map((title) => {
+        return (
+          <BottomTitle title={title.left}/>
+        );
+      })}
 
       <ContainerNews>
         <ContainerNewsUl>

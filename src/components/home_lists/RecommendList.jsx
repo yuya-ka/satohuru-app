@@ -27,6 +27,16 @@ const RecommendList = () => {
     </>
   );
 };
+const RecommendList2 = () => {
+  return (
+    <>
+    <RecommendLi><img src={img1} alt='img' height='120px' width='228px' /></RecommendLi>
+    <RecommendLi><img src={img2} alt='img' height='120px' width='228px' /></RecommendLi>
+    <RecommendLi><img src={img3} alt='img' height='120px' width='228px' /></RecommendLi>
+    </>
+  );
+};
 
 
 export default RecommendList;
+export {RecommendList2};
