@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import str from "../../images/pic_star45.png"
-
 
 const RevueLi = styled.div`
   width: auto;
@@ -26,7 +24,6 @@ const RevueRate = styled.p`
   margin: 0;
   padding: 0;
 `;
-
 const RevueLiMain = styled.div`
   width: auto;
   margin: 0;
@@ -43,7 +40,6 @@ const RevueLiText = styled.p`
   padding: 0;
 `;
 
-
 const RevueList = () => {
   return (
     <RevueLi>
@@ -59,6 +55,5 @@ const RevueList = () => {
     </RevueLi>
   );
 };
-
 
 export default RevueList;

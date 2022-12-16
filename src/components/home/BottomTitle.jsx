@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const ContainerTitle = styled.div`
   width: auto;
   margin: 0 0 10px 0;
@@ -27,7 +26,6 @@ const ContainerTitleBtn = styled.button`
   border-radius: 4px;
 `;
 
-
 const BottomTitle = ({title}) => {
   return (
     <ContainerTitle>
@@ -36,6 +34,5 @@ const BottomTitle = ({title}) => {
     </ContainerTitle>
   );
 };
-
 
 export default BottomTitle;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
-
 import img from "../../images/1221552_00_1670457676.webp"
 import str from "../../images/pic_star45.png"
-
 
 const ItemBox = styled.div`
   width: 144px;
@@ -51,24 +49,21 @@ const SetReview = styled.div`
   padding: 0;
 `;
 
-
-const Item = ({items}) => {
-  // console.log(items);
+const Item = ({item}) => {
   return (
     <ItemBox>
       <img src={img} alt='img' height='144px' width='144px' />
       <ItemSet>
-        <SetName>{`${items.name}`}</SetName>
-        <SetCity>{`${items.city}`}</SetCity>
+        <SetName>{`${item.name}`}</SetName>
+        <SetCity>{`${item.city}`}</SetCity>
         <SetShow>
-          <SetPrice>{`${items.price}`}</SetPrice>
-          <SetText>{`${items.text}`}</SetText>
+          <SetPrice>{`${item.price}`}</SetPrice>
+          <SetText>{`${item.text}`}</SetText>
           <SetReview><img src={str} alt='str' height='13px' width='82px' /></SetReview>
         </SetShow>
       </ItemSet>
     </ItemBox>
   );
 };
-
 
 export default Item;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
-
 import RecommendList from "./RecommendList";
 import {RecommendList2} from "./RecommendList";
-
 
 const Recommendation = styled.div`
   width: auto;
@@ -23,7 +21,6 @@ const RecommendUl = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 `;
-
 const GroupTitle = styled.div`
   width: auto;
   margin: 0 0 10px 0;
@@ -45,7 +42,6 @@ const TitleLink = styled.p`
   font-size: 14px;
 `;
 
-
 const Recommend = ({title}) => {
   return (
     <Recommendation>
@@ -53,19 +49,14 @@ const Recommend = ({title}) => {
         <TitleText>{`${title.title1}`}</TitleText>
         <TitleLink>もっと見る</TitleLink>
       </GroupTitle>
-
       <RecommendBox>
         <RecommendUl>
-
           <RecommendList />
-
         </RecommendUl>
       </RecommendBox>
-
     </Recommendation>
   );
 };
-
 const Recommend2 = ({title}) => {
   return (
     <Recommendation>
@@ -73,19 +64,14 @@ const Recommend2 = ({title}) => {
         <TitleText>{`${title.title2}`}</TitleText>
         <TitleLink>もっと見る</TitleLink>
       </GroupTitle>
-
       <RecommendBox>
         <RecommendUl>
-
           <RecommendList2 />
-
         </RecommendUl>
       </RecommendBox>
-
     </Recommendation>
   );
 };
-
 
 export default Recommend;
 export {Recommend2};

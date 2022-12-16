@@ -1,8 +1,6 @@
 import styled from "styled-components";
-
 import Item from "./Item";
 import Title from "./Title";
-
 
 const Group = styled.div`
   width: auto;
@@ -31,34 +29,23 @@ const ContainerInner = styled.div`
   display: flex;
 `;
 
-
 const Ranking = (props) => {
   return (
     <Group>
       <Title title={props.rankingData.title}/>
-
       <GroupContainer>
         <ContainerOuter>
           <ContainerInner>
-
-            {props.rankingData.items.map((items) => {
+            {props.rankingData.items.map((item) => {
               return (
-                <>
-                <Item items={items}/>
-                <Item items={items}/>
-                <Item items={items}/>
-                <Item items={items}/>
-                <Item items={items}/>
-                </>
+                <Item item={item}/>
               );
             })}
-
           </ContainerInner>
         </ContainerOuter>
       </GroupContainer>
     </Group>
   );
 };
-
 
 export default Ranking;

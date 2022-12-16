@@ -1,14 +1,12 @@
 import styled from "styled-components";
-
-import Ranking from "./home_lists/Ranking";
+import Ranking from "./home/Ranking";
 import Sidebar from "./Sidebar"
 import HomeVisual from "./HomeVisual";
-import Recommend from "./home_lists/Recommend";
-import {Recommend2} from "./home_lists/Recommend";
-import News from "./home_lists/News";
-import Revue from "./home_lists/Revue";
-import Simulation from "./home_lists/Simulation";
-
+import Recommend from "./home/Recommend";
+import {Recommend2} from "./home/Recommend";
+import News from "./home/News";
+import Revue from "./home/Revue";
+import Simulation from "./home/Simulation";
 
 const StyledMain = styled.main`
   min-width: 1020px;
@@ -57,9 +55,6 @@ const MainCenterContainer = styled.div`
   padding: 0;
   float: left;
 `;
-
-
-/* -------------------- bottom -------------------- */
 const MainBottom = styled.div`
   width: auto;
   margin: 45px 0 0 0;
@@ -72,7 +67,6 @@ const BottomContainer = styled.div`
   padding: 0;
 `;
 
-
 const rankingsData = [
   {title: 'ふるさと納税 人気急上昇ランキング' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]},
   {title: 'ふるさと納税 総合人気ランキング' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]},
@@ -80,11 +74,9 @@ const rankingsData = [
   {title: 'おすすめお礼品' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]},
   {title: 'ふるさと納税 新着お礼品' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]}
 ];
-
 const recommendTitles= [
   {title1: 'おすすめ特集', title2: 'おすすめコンテンツ'}
 ];
-
 
 const Main = () => {
   return (
@@ -92,24 +84,17 @@ const Main = () => {
       <MainContent>
         <MainContentOuter>
         <MainContentInner>
-
           <HomeVisual />
           <MainCenter>
-
             <Sidebar />
             <MainCenterWrap>
               <MainCenterContainer>
-
                 {rankingsData.map((rankingData) => {
                   return (
                   <Ranking rankingData={rankingData}/>
-                  
                   );
                 })}
-
                 <Simulation />
-
-
                 {recommendTitles.map((recommendTitle) => {
                   return (
                     <>
@@ -118,18 +103,11 @@ const Main = () => {
                     </>
                   );
                 })}
-
-
-
-
-
               </MainCenterContainer>
             </MainCenterWrap>
           </MainCenter>
-
           <MainBottom>
             <BottomContainer>
-              
               <News />
               <Revue />
             </BottomContainer>

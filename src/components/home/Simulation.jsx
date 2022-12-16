@@ -48,7 +48,6 @@ const MoneySelectArea = styled.select`
   border-radius: 3px;
   border: solid #aaa 1px;
 `;
-
 const ResultArea = styled.div`
   width: auto;
   margin: 0;
@@ -84,7 +83,6 @@ const ResultRear = styled.p`
   font-weight: bold;
   color: #7aa82e;
 `;
-
 const GroupTitle = styled.div`
   width: auto;
   margin: 0 0 10px 0;
@@ -106,11 +104,9 @@ const TitleLink = styled.p`
   font-size: 14px;
 `;
 
-
 const Simulation = () => {
   return (
     <Recommendation>
-
       <GroupTitle>
         <TitleText>控除上限額シミュレーション</TitleText>
         <TitleLink>詳細はこちら</TitleLink>
@@ -142,6 +138,5 @@ const Simulation = () => {
     </Recommendation>
   );
 };
-
 
 export default Simulation;

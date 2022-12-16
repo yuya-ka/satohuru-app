@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import img1 from "../images/bnr_year-end_new-year.png"
 import img2 from "../images/bnr_camp_202212_pcp_20pct.webp"
 import img3 from "../images/bnr_research_no1_2022.webp"
@@ -7,7 +6,6 @@ import img4 from "../images/bnr_onestop_app.webp"
 import img5 from "../images/bnr_satofull_app.webp"
 import img6 from "../images/bnr_special_myhometown.webp"
 import img7 from "../images/bnr_philosophy.webp"
-
 
 const MainSidebar = styled.div`
   width: 250px;
@@ -105,7 +103,6 @@ const Section3Text = styled.p`
   padding: 10px 20px;
   font-size: 14px;
 `;
-
 const Section4ListBox = styled.div`
   width: auto;
   margin: 0;
@@ -142,7 +139,6 @@ const newRegion = region.map(val => {
   return <li style={{margin: '10px 0'}} key={val.toString()}>{val}</li>;
 });
 
-
 const Sidebar = () => {
   return (
     <MainSidebar>
@@ -150,7 +146,6 @@ const Sidebar = () => {
         <SidebarSection1>
           <img src={img1} alt='section1' height='80px' width='230px' />
         </SidebarSection1>
-
         <SidebarSection2>
           <Section2Title>よくあるご質問</Section2Title>
           <Section2Ul>
@@ -162,14 +157,12 @@ const Sidebar = () => {
             <Section2Li><Section2Text>ワンストップ特例制度とは</Section2Text></Section2Li>
           </Section2Ul>
         </SidebarSection2>
-
         <SidebarSection1>
           <img src={img2} alt='section1' height='110px' width='230px' />
         </SidebarSection1>
         <SidebarSection1>
           <img src={img3} alt='section1' height='110px' width='230px' />
         </SidebarSection1>
-
         <SidebarSection3>
           <SideBox>
             <Section3TitleBox><Section3Title>初めてのふるさと納税</Section3Title></Section3TitleBox>
@@ -183,14 +176,12 @@ const Sidebar = () => {
             </Section3ListBox>
           </SideBox>
         </SidebarSection3>
-
         <SidebarSection1>
           <img src={img4} alt='section1' height='110px' width='230px' />
         </SidebarSection1>
         <SidebarSection1>
           <img src={img5} alt='section1' height='110px' width='230px' />
         </SidebarSection1>
-
         <SidebarSection3>
           <SideBox>
             <Section3TitleBox><Section3Title>さとふるのサービス紹介</Section3Title></Section3TitleBox>
@@ -204,14 +195,12 @@ const Sidebar = () => {
             </Section3ListBox>
           </SideBox>
         </SidebarSection3>
-
         <SidebarSection1>
           <img src={img6} alt='section1' height='110px' width='230px' />
         </SidebarSection1>
         <SidebarSection1>
           <img src={img7} alt='section1' height='110px' width='230px' />
         </SidebarSection1>
-
         <SidebarSection3>
           <SideBox>
             <Section3TitleBox><Section3Title>お礼品から探す</Section3Title></Section3TitleBox>
@@ -222,7 +211,6 @@ const Sidebar = () => {
             </Section4ListBox>
           </SideBox>
         </SidebarSection3>
-
         <SidebarSection3>
           <SideBox>
             <Section3TitleBox><Section3Title>地域から探す</Section3Title></Section3TitleBox>
@@ -233,11 +221,9 @@ const Sidebar = () => {
             </Section4ListBox>
           </SideBox>
         </SidebarSection3>
-
       </MainSidebarColumn>
     </MainSidebar>
   );
 };
-
 
 export default Sidebar;

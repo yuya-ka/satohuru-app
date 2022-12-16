@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import body from "../images/bnr_special_osechi.webp"
-
 
 const MainSection = styled.div`
   width: 100%;
@@ -38,7 +36,6 @@ const SectionLink = styled.a`
   margin: 0;
   padding: 0;
 `;
-
 const MainVisual = styled.div`
   width: 100%;
   height: 310px;
@@ -93,7 +90,6 @@ const HomeVisual = () => {
         </MainSectionUl>
       </MainSectionWord>
     </MainSection>
-
     <MainVisual>
     <MainVisualIn>
       <MainVisualBody>
@@ -105,6 +101,5 @@ const HomeVisual = () => {
     </>
   );
 };
-
 
 export default HomeVisual;

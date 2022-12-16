@@ -1,8 +1,6 @@
 import styled from "styled-components";
-
 import BottomTitle from "./BottomTitle";
 import RevueList from "./RevueList";
-
 
 const ContainerRight = styled.div`
   width: 460px;
@@ -36,32 +34,20 @@ const RevueBox = styled.div`
   margin: 0;
   padding: 0;
 `;
-
 const Scroll = styled.div`
   width: auto;
   margin: 0;
   padding: 0;
 `;
 
-
-const titleName= [
-  {right: '評価の高い新着お礼品レビュー・口コミ'}
-];
-
 const Revue = () => {
   return (
     <ContainerRight>
-      {titleName.map((title) => {
-        return (
-          <BottomTitle title={title.right}/>
-        );
-      })}
-
+      <BottomTitle title={'評価の高い新着お礼品レビュー・口コミ'}/>
       <ContainerRevue>
         <ContainerRevueBox>
           <RevueItem>
             <RevueBox>
-
               <RevueList />
               <RevueList />
               <RevueList />
@@ -69,13 +55,11 @@ const Revue = () => {
               <RevueList />
             </RevueBox>
           </RevueItem>
-
           <Scroll></Scroll>
         </ContainerRevueBox>
       </ContainerRevue>
     </ContainerRight>
   );
 };
-
 
 export default Revue;

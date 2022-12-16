@@ -1,16 +1,6 @@
 import styled from "styled-components";
-
-import FooterTop from "./footer_lists/Summary";
-
+import FooterTop from "./footer/Summary";
 import logo from "../images/logo_satofull01.webp"
-
-
-
-
-
-
-
-
 
 const FooterCenter = styled.footer`
   min-width: 1020px;
@@ -44,7 +34,6 @@ const ContentNavLi = styled.div`
   font-size: 12px;
   justify-content: center;
 `;
-
 const FooterBottom = styled.div`
   min-width: 1020px;
   height: 71px;
@@ -68,15 +57,11 @@ const ContentText = styled.p`
   font-size: 15px;
 `;
 
-
-/* ---------------------- jsx ---------------------- */
 const Footer = () => {
   return (
     <>
     <FooterTop />
-
     <FooterCenter>
-
       <CenterContent>
         <ContentNav>
           <ContentNavLi>サイトマップ </ContentNavLi>
@@ -90,19 +75,15 @@ const Footer = () => {
           <ContentNavLi>採用情報</ContentNavLi>
         </ContentNav>
       </CenterContent>
-
     </FooterCenter>
-
     <FooterBottom>
-
       <BottomContent>
         <img src={logo} alt='logo' height='35px' width='auto' />
         <ContentText>© Satofull Co., Ltd. All rights reserved.</ContentText>
       </BottomContent>
-
     </FooterBottom>
     </>
   );
-}
+};
 
 export default Footer;

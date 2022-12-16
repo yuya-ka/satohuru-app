@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const PurposeLiftBox = styled.div`
   width: 490px;
   height: 100%;
@@ -38,8 +37,6 @@ const ListLi = styled.div`
   flex-wrap: wrap;
 `;
 
-//style={{display: 'flex'}}
-
 const category = ['肉', '魚介・海産物', '米・パン', '果物・フルーツ', '野菜',
   '卵・乳製品', '酒・アルコール', '飲料・ドリンク', '菓子・スイーツ', '麺',
   '惣菜・加工品', '調味料', '家電製品', '旅行券・チケット', '雑貨・日常品',
@@ -53,27 +50,22 @@ const newRegion = region.map(val => {
   return <p style={{ margin: '0 2px', padding: '0 10px' }} key={val.toString()}>{val}</p>;
 });
 
-
 const PurposeLift = () => {
   return (
     <PurposeLiftBox>
       <PurposeTitle>目的別に探す</PurposeTitle>
-
       <PurposeCategory>
         <CategoryTitle>お礼品から探す</CategoryTitle>
         <CategoryList><ListLi>{newCategory}</ListLi></CategoryList>
       </PurposeCategory>
-
       <PurposeCategory>
         <CategoryTitle>ランキングから探す</CategoryTitle>
         <CategoryList><ListLi>{newCategory}</ListLi></CategoryList>
       </PurposeCategory>
-
       <PurposeCategory>
         <CategoryTitle>地域から探す</CategoryTitle>
         <CategoryList><ListLi>{newRegion}</ListLi></CategoryList>
       </PurposeCategory>
-
       <PurposeCategory>
         <CategoryTitle>特集から探す</CategoryTitle>
       </PurposeCategory>
@@ -83,6 +75,5 @@ const PurposeLift = () => {
     </PurposeLiftBox>
   );
 };
-
 
 export default PurposeLift;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const GroupTitle = styled.div`
   width: auto;
   margin: 0 0 10px 0;
@@ -21,9 +20,7 @@ const TitleLink = styled.p`
   padding: 0;
 `;
 
-
 const Title = ({title}) => {
-  // console.log(title);
   return (
     <GroupTitle>
       <TitleText>{`${title}`}</TitleText>
@@ -31,6 +28,5 @@ const Title = ({title}) => {
     </GroupTitle>
   );
 };
-
 
 export default Title;

@@ -1,10 +1,6 @@
 import styled from "styled-components";
-
 import PurposeLift from "./PurposeLeft";
 import PurposeRight from "./PurposeRight";
-
-
-
 
 const FooterTopBox = styled.footer`
   min-width: 1020px;
@@ -31,13 +27,11 @@ const Container = styled.div`
   justify-content: flex-start;
 `;
 
-
 const FooterTop = () => {
   return (
     <FooterTopBox>
       <TopContent>
         <Container>
-
           <PurposeLift />
           <PurposeRight />
         </Container>
@@ -45,6 +39,5 @@ const FooterTop = () => {
     </FooterTopBox>
   );
 };
-
 
 export default FooterTop;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import sns1 from "../../images/bnr_sns01.webp"
 import sns2 from "../../images/bnr_sns02.webp"
 import sns3 from "../../images/bnr_sns03.webp"
@@ -7,7 +6,6 @@ import sns4 from "../../images/bnr_sns04.webp"
 import apple from "../../images/apple_pc.webp"
 import google from "../../images/google_pc.webp"
 import logo2 from "../../images/logo_privacy.webp"
-
 
 const PurposeFirst = styled.div`
   width: 450px;
@@ -48,7 +46,6 @@ const GuideLi = styled.div`
   align-items: center;
   background-color: #fff;
 `;
-
 const AppBox = styled.div`
   height: 60px;
   margin: 10px 0 0 0;
@@ -80,12 +77,10 @@ const App = styled.div`
   padding: 0;
 `;
 
-
 const PurposeRight = () => {
   return (
     <PurposeFirst>
       <PurposeTitle>初めての方へ</PurposeTitle>
-
       <FirstGuide>
         <GuideUl>
           <GuideLi><p>ふるさと納税とは</p></GuideLi>
@@ -100,7 +95,6 @@ const PurposeRight = () => {
           <GuideLi><p>さとふるの特徴</p></GuideLi>
         </GuideUl>
       </FirstGuide>
-
       <AppBox>
         <AppGuide>
           <img src={sns1} alt='sna' height='60px' width='110px' />
@@ -115,7 +109,6 @@ const PurposeRight = () => {
           <img src={sns4} alt='sns' height='60px' width='110px' />
         </AppGuide>
       </AppBox>
-
       <AppBox>
         <BoxSet>
           <Guide>
@@ -132,6 +125,5 @@ const PurposeRight = () => {
     </PurposeFirst>
   );
 };
-
 
 export default PurposeRight;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const ContainerNewsLi = styled.div`
   width: auto;
   margin: 0 0 10px 0;
@@ -19,7 +18,6 @@ const NewsText = styled.p`
   padding: 0;
 `;
 
-
 const NewsList = () => {
   return (
     <ContainerNewsLi>
@@ -30,6 +28,5 @@ const NewsList = () => {
     </ContainerNewsLi>
   );
 };
-
 
 export default NewsList;

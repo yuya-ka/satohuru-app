@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import logo from "../images/logo_satofull01.webp"
 import icon1 from "../images/icon_header01.webp"
 import icon2 from "../images/icon_header02.webp"
@@ -10,14 +9,12 @@ import { GiPresent } from "react-icons/gi"
 import { BiMap } from "react-icons/bi"
 import { BsFillArchiveFill } from "react-icons/bs"
 
-
 const StyledHeader = styled.header`
   min-width: 980px;
   height: auto;
   margin: 0;
   padding: 0;
 `;
-
 const HeaderTop = styled.div`
   min-width: 1020px;
   height: 40px;
@@ -52,7 +49,6 @@ const TopNavLi = styled.div`
   display: inline;
   margin: 0 0 0 20px;
 `;
-
 const HeaderCenter = styled.div`
   min-width: 1020px;
   height: 60px;
@@ -122,7 +118,6 @@ const CenterNavLi = styled.div`
   padding: 0;
   display: inline;
 `;
-
 const HeaderBottom = styled.div`
   min-width: 1020px;
   height: 50px;
@@ -160,7 +155,6 @@ const BottomList = styled.div`
   padding-left: 10px;
 `;
 
-
 const Header = () => {
   return (
     <StyledHeader>
@@ -175,7 +169,6 @@ const Header = () => {
           </TopNav>
         </TopContainer>
       </HeaderTop>
-
       <HeaderCenter>
         <CenterContainer>
           <CenterLogo>
@@ -193,40 +186,32 @@ const Header = () => {
           </CenterNav>
         </CenterContainer>
       </HeaderCenter>
-
       <HeaderBottom>
         <BottomNav> 
-
           <BottomNavLi>
             <BottomIcon>
               <FaCrown /><BottomList>人気ランキング</BottomList>
             </BottomIcon>
           </BottomNavLi>
-
           <BottomNavLi>
             <BottomIcon>
               < GiPresent /><BottomList>お礼品から探す</BottomList>
             </BottomIcon>
           </BottomNavLi>
-
           <BottomNavLi>
             <BottomIcon>
               < BiMap /><BottomList>地域から探す</BottomList>
             </BottomIcon>
           </BottomNavLi>
-
           <BottomNavLi>
             <BottomIcon>
               < BsFillArchiveFill /><BottomList>特集・キャンペーン</BottomList>
             </BottomIcon>
           </BottomNavLi>
-        
         </BottomNav>
       </HeaderBottom>
-
     </StyledHeader>
   );
-}
-
+};
 
 export default Header;
