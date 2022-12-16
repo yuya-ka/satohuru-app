@@ -32,22 +32,29 @@ const ContainerInner = styled.div`
 `;
 
 
-const Ranking = () => {
+const Ranking = (props) => {
+  console.log(props.rankingData.items);
+  
   return (
     <Group>
-      
-      <Title />
+      <Title title={props.rankingData.title}/>
 
       <GroupContainer>
         <ContainerOuter>
           <ContainerInner>
 
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            
+            {props.rankingData.items.map((items) => {
+              return (
+                <>
+                <Item items={items}/>
+                <Item items={items}/>
+                <Item items={items}/>
+                <Item items={items}/>
+                <Item items={items}/>
+                </>
+              );
+            })}
+
           </ContainerInner>
         </ContainerOuter>
       </GroupContainer>

@@ -17,11 +17,10 @@ const PurposeFirst = styled.div`
   margin-left: 40px;
 `;
 const PurposeTitle = styled.p`
-  margin: 0;
+  margin: 0 0 15px 0;
   padding: 0;
   font-size: 17px;
   font-weight: 700;
-  margin-bottom: 15px;
 `;
 const FirstGuide = styled.div`
   width: 100%;

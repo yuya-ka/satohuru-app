@@ -52,16 +52,17 @@ const SetReview = styled.div`
 `;
 
 
-const Item = () => {
+const Item = ({items}) => {
+  // console.log(items);
   return (
     <ItemBox>
       <img src={img} alt='img' height='144px' width='144px' />
       <ItemSet>
-        <SetName>【先行受付】山梨県産シャインマスカ...</SetName>
-        <SetCity>山梨県山梨市</SetCity>
+        <SetName>{`${items.name}`}</SetName>
+        <SetCity>{`${items.city}`}</SetCity>
         <SetShow>
-          <SetPrice>寄付金額</SetPrice>
-          <SetText>山梨県の豊かな自然で育った、味わい深いシャインマスカットです。</SetText>
+          <SetPrice>{`${items.price}`}</SetPrice>
+          <SetText>{`${items.text}`}</SetText>
           <SetReview><img src={str} alt='str' height='13px' width='82px' /></SetReview>
         </SetShow>
       </ItemSet>

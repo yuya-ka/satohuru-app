@@ -65,7 +65,7 @@ const MainVisualPointer = styled.div`
   padding: 0;
 `;
 
-const Topbar = () => {
+const HomeVisual = () => {
   return (
     <>
     <MainSection>
@@ -107,4 +107,4 @@ const Topbar = () => {
 };
 
 
-export default Topbar;
+export default HomeVisual;

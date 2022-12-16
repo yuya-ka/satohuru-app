@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import Title from "./Title";
 import RecommendList from "./RecommendList";
 
 
@@ -24,11 +23,35 @@ const RecommendUl = styled.div`
   flex-wrap: wrap;
 `;
 
+const GroupTitle = styled.div`
+  width: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const TitleText = styled.h2`
+  width: auto;
+  margin: 0;
+  padding: 0;
+`;
+const TitleLink = styled.p`
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+`;
+
 
 const Recommend = () => {
   return (
     <Recommendation>
-      <Title />
+      <GroupTitle>
+        <TitleText>おすすめ特集</TitleText>
+        <TitleLink>もっと見る</TitleLink>
+      </GroupTitle>
 
       <RecommendBox>
         <RecommendUl>

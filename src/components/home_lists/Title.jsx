@@ -22,10 +22,11 @@ const TitleLink = styled.p`
 `;
 
 
-const Title = () => {
+const Title = ({title}) => {
+  // console.log(title);
   return (
     <GroupTitle>
-      <TitleText>ふるさと納税 人気急上昇ランキング</TitleText>
+      <TitleText>{`${title}`}</TitleText>
       <TitleLink>もっと見る</TitleLink>
     </GroupTitle>
   );
