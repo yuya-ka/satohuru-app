@@ -27,11 +27,13 @@ const News = () => {
       <BottomTitle title={'さとふるNEWS'}/>
       <ContainerNews>
         <ContainerNewsUl>
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
           <NewsList />
           <NewsList />
           <NewsList />
           <NewsList />
           <NewsList />
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
         </ContainerNewsUl>
       </ContainerNews>
     </ContainerLeft>

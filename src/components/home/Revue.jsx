@@ -48,11 +48,13 @@ const Revue = () => {
         <ContainerRevueBox>
           <RevueItem>
             <RevueBox>
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
               <RevueList />
               <RevueList />
               <RevueList />
               <RevueList />
               <RevueList />
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
             </RevueBox>
           </RevueItem>
           <Scroll></Scroll>

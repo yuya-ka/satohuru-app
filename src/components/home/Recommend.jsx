@@ -46,12 +46,14 @@ const Recommend = ({title}) => {
   return (
     <Recommendation>
       <GroupTitle>
-        <TitleText>{`${title.title1}`}</TitleText>
+        <TitleText>{`${title.special}`}</TitleText>
         <TitleLink>もっと見る</TitleLink>
       </GroupTitle>
       <RecommendBox>
         <RecommendUl>
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
           <RecommendList />
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
         </RecommendUl>
       </RecommendBox>
     </Recommendation>
@@ -61,12 +63,14 @@ const Recommend2 = ({title}) => {
   return (
     <Recommendation>
       <GroupTitle>
-        <TitleText>{`${title.title2}`}</TitleText>
+        <TitleText>{`${title.content}`}</TitleText>
         <TitleLink>もっと見る</TitleLink>
       </GroupTitle>
       <RecommendBox>
         <RecommendUl>
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
           <RecommendList2 />
+{/* -------------------- 後でコンポーネントをmapで使いまわせるように修正する -------------------- */}
         </RecommendUl>
       </RecommendBox>
     </Recommendation>

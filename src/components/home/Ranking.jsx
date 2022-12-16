@@ -38,6 +38,7 @@ const Ranking = (props) => {
           <ContainerInner>
             {props.rankingData.items.map((item) => {
               return (
+/* -------------------- 後でItemをmapで使いまわせるように修正する（現在は1つしかない。最低5つ必要） -------------------- */
                 <Item item={item}/>
               );
             })}
