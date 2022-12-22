@@ -7,6 +7,7 @@ import {Recommend2} from "./home/Recommend";
 import News from "./home/News";
 import Revue from "./home/Revue";
 import Simulation from "./home/Simulation";
+import Example from "./Example";
 
 const StyledMain = styled.main`
   min-width: 1020px;
@@ -82,6 +83,7 @@ const recommendTitles= [
 const Main = () => {
   return (
     <StyledMain>
+      <Example></Example>
       <MainContent>
         <MainContentOuter>
         <MainContentInner>
