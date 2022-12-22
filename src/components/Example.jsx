@@ -17,11 +17,12 @@ const Sample = styled.div`
 const Example = () => {
   const baseURL = "http://localhost:3001/products";
   const [products, setProducts] = useState(null);
-  console.log(products)
   useEffect(() => {
-    axios.get(baseURL).then((res) => {
+    const getProducts = async () => {
+      const res = await axios.get(baseURL)
       setProducts(res.data);
-    });
+    }
+    getProducts();
   },[]);
   //もしproductsでないならnullを返す
   if (!products) return null;
