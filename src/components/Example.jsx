@@ -15,7 +15,7 @@ const Sample = styled.div`
 `;
 
 const Example = () => {
-  const baseURL = "http://localhost:3001/products";
+  const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
   const [products, setProducts] = useState(null);
   useEffect(() => {
     const getProducts = async () => {
@@ -28,8 +28,9 @@ const Example = () => {
   if (!products) return null;
   return (
     <Sample>
-      <p>{products[0].title}</p>
-      <p>{products[0].money}</p>
+      <p>{products[0].name}</p>
+      <p>{products[0].city}</p>
+      <p>{products[0].price}</p>
       <p>{products[0].content}</p>
     </Sample>
   );

@@ -58,7 +58,7 @@ const Item = ({item}) => {
         <SetCity>{`${item.city}`}</SetCity>
         <SetShow>
           <SetPrice>{`${item.price}`}</SetPrice>
-          <SetText>{`${item.text}`}</SetText>
+          <SetText>{`${item.content}`}</SetText>
           <SetReview><img src={str} alt='str' height='13px' width='82px' /></SetReview>
         </SetShow>
       </ItemSet>

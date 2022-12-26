@@ -3,7 +3,7 @@ import BottomTitle from "./BottomTitle";
 import RevueList from "./RevueList";
 
 const ContainerRight = styled.div`
-  width: 460px;
+  width: 450px;
   height: 370px;
   margin: 0;
   padding: 0;
