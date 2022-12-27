@@ -7,7 +7,6 @@ import {Recommend2} from "./home/Recommend";
 import News from "./home/News";
 import Revue from "./home/Revue";
 import Simulation from "./home/Simulation";
-import Example from "./Example";
 
 const StyledMain = styled.main`
   min-width: 1020px;
@@ -68,22 +67,17 @@ const BottomContainer = styled.div`
   padding: 0;
 `;
 
-/* -------------------- 後でItemをmapで使いまわせるように修正する（現在は1つしかない。最低5つ必要。後、画像もmapで回す。） -------------------- */
-const rankingsData = [
-  {title: 'ふるさと納税 人気急上昇ランキング' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]},
-  {title: 'ふるさと納税 総合人気ランキング' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]},
-  {title: '定期便の人気ランキング' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]},
-  {title: 'おすすめお礼品' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]},
-  {title: 'ふるさと納税 新着お礼品' , items: [{name: '【先行受付】山梨県産シャインマスカ...', city: '山梨県山梨市', price: '寄付金額 10000円', text: '山梨県の豊かな自然で育った、味わい深いシャインマスカットです。'}]}
-];
+const rankingsTitles = ['ふるさと納税 人気急上昇ランキング','ふるさと納税 総合人気ランキング','定期便の人気ランキング','おすすめお礼品','ふるさと納税 新着お礼品'];
 const recommendTitles= [
   {special: 'おすすめ特集', content: 'おすすめコンテンツ'}
 ];
-
+//------------ 現在、ランキングタイトルとアイテムを別で表示している。また、タイトルは別々で表示できているがアイテムが複数のタイトルにあなじものが表示されている。
+//------------ 後で、カテゴリーなどを追加し、そのカテゴリーにタイトルやアイテムを紐付けして、アイテムが複数のタイトルに重複するのをなくす。
+//------------ 書き方として、category:[{title:'test'}{items[item,item,item...]}]など
+//------------ mapの表示の仕方として、map(category), 表示の仕方として、タイトルは、category.title アイテムは、category.items.mapなどで記述する。
 const Main = () => {
   return (
     <StyledMain>
-      <Example></Example>
       <MainContent>
         <MainContentOuter>
         <MainContentInner>
@@ -92,9 +86,9 @@ const Main = () => {
             <Sidebar />
             <MainCenterWrap>
               <MainCenterContainer>
-                {rankingsData.map((rankingData) => {
+                {rankingsTitles.map((rankingTitle) => {
                   return (
-                  <Ranking rankingData={rankingData}/>
+                  <Ranking rankingTitle={rankingTitle}/>
                   );
                 })}
                 <Simulation />

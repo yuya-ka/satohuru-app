@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Item from "./Item";
 import Title from "./Title";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Group = styled.div`
   width: auto;
@@ -30,15 +32,27 @@ const ContainerInner = styled.div`
 `;
 
 const Ranking = (props) => {
+  const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
+  const [products, setProducts] = useState(null);
+  useEffect(() => {
+    const getProducts = async () => {
+      const res = await axios.get(baseURL)
+      setProducts(res.data);
+    }
+    getProducts();
+  },[]);
+  if (!products) {
+    return (<h2>表示されるデータがありません</h2>)
+  };
+  //沢山表示されるのは、アイテムが複数のタイトルに重複されているから
   return (
     <Group>
-      <Title title={props.rankingData.title}/>
+      <Title title={props.rankingTitle}/>
       <GroupContainer>
         <ContainerOuter>
           <ContainerInner>
-            {props.rankingData.items.map((item) => {
+            {products.map((item) => {
               return (
-/* -------------------- 後でItemをmapで使いまわせるように修正する（現在は1つしかない。最低5つ必要） -------------------- */
                 <Item item={item}/>
               );
             })}
