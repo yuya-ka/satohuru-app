@@ -41,7 +41,9 @@ const Ranking = (props) => {
     }
     getProducts();
   },[]);
-  if (!products) return null;
+  if (!products) {
+    return (<h2>表示されるデータがありません</h2>)
+  };
   return (
     <Group>
       <Title title={props.rankingTitle}/>
