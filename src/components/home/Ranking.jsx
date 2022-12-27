@@ -44,6 +44,7 @@ const Ranking = (props) => {
   if (!products) {
     return (<h2>表示されるデータがありません</h2>)
   };
+  //沢山表示されるのは、アイテムが複数のタイトルに重複されているから
   return (
     <Group>
       <Title title={props.rankingTitle}/>
