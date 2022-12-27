@@ -57,7 +57,7 @@ const Item = ({item}) => {
         <SetName>{`${item.name}`}</SetName>
         <SetCity>{`${item.city}`}</SetCity>
         <SetShow>
-          <SetPrice>{`${item.price}`}</SetPrice>
+          <SetPrice>{`寄付金額${item.price}円`}</SetPrice>
           <SetText>{`${item.content}`}</SetText>
           <SetReview><img src={str} alt='str' height='13px' width='82px' /></SetReview>
         </SetShow>
