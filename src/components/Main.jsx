@@ -73,7 +73,7 @@ const recommendTitles= [
 ];
 //------------ 現在、ランキングタイトルとアイテムを別で表示している。また、タイトルは別々で表示できているがアイテムが複数のタイトルにあなじものが表示されている。
 //------------ 後で、カテゴリーなどを追加し、そのカテゴリーにタイトルやアイテムを紐付けして、アイテムが複数のタイトルに重複するのをなくす。
-//------------ 書き方として、category:[{title:'test'}{items[item,item,item...]}]など
+//------------ 書き方として、category:[{title:'test'}{items[item,item,item...]}]など。
 //------------ mapの表示の仕方として、map(category), 表示の仕方として、タイトルは、category.title アイテムは、category.items.mapなどで記述する。
 const Main = () => {
   return (

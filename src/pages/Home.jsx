@@ -17,7 +17,7 @@ const Home = () => {
       <Footer />
     </StyledHome>
   );
-}
+};
 
 //別のファイルでインポート(読み込み)出来るようにする
 export default Home;
