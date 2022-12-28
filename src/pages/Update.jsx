@@ -5,19 +5,24 @@ import axios from "axios";
 const StyledProducts = styled.div`
   height: 100%;
   width: 100%;
-  margin: 50px 0 0 50px;
+  margin: 0;
 `;
 const ContentText = styled.div`
   width: 100%;
-  height: 100%;
+  height: 30px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const Content = styled.div`
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 `;
 const Btn = styled.button`
   width: 100px;
@@ -25,21 +30,35 @@ const Btn = styled.button`
   margin: 0;
   padding: 0;
 `;
+const ContentName = styled.div`
+  width: 100px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Update = () => {
   const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
-  const [products, setProducts] = useState(null);
-
-  const updateProducts = async () => {
-    const updateRes = await axios.patch(`${baseURL}/${4333}`, {
+  const [product, setProduct] = useState(null);
+  useEffect(() => {
+    const getProducts = async () => {
+      const res = await axios.get(`${baseURL}/${19}`)
+      setProduct(res.data);
+    }
+    getProducts();
+  },[]);
+  const updateProduct = async () => {
+    const updateRes = await axios.patch(`${baseURL}/${product.id}`, {
       name: name,
       city: city,
       price: price,
       content: content
     })
-    setProducts(updateRes.data);
+    setProduct(updateRes.data);
   };
-
   const [name, setName] = useState(null)
   const ChangeName = (e) => {
     setName(e.target.value)
@@ -56,17 +75,36 @@ const Update = () => {
   const ChangeContent = (e) => {
     setContent(e.target.value)
   }
-
+  if (!product) {
+    return (<h2>表示されるデータがありません</h2>)
+  };
   return (
     <StyledProducts>
       <ContentText>
-        <input onChange={ChangeName}></input><br />
-        <input onChange={ChangeCity}></input><br />
-        <input onChange={ChangePrice}></input><br />
-        <input onChange={ChangeContent}></input>
+        <div>{product.id}</div>
+        <div>{product.name}</div>
+        <div>{product.city}</div>
+        <div>{product.price}</div>
+        <div>{product.content}</div>
+      </ContentText>
+      <ContentText>
+        <ContentName>name</ContentName>
+        <input defaultValue={product.name} value={name} onChange={ChangeName}></input><br />
+      </ContentText>
+      <ContentText>
+        <ContentName>city</ContentName>
+        <input defaultValue={product.city} value={city} onChange={ChangeCity}></input><br />
+      </ContentText>
+      <ContentText>
+        <ContentName>price</ContentName>
+        <input defaultValue={product.price} value={price} onChange={ChangePrice}></input><br />
+      </ContentText>
+      <ContentText>
+        <ContentName>content</ContentName>
+        <input defaultValue={product.content} value={content} onChange={ChangeContent}></input>
       </ContentText>
       <Content>
-        <Btn onClick={() => updateProducts()}>編集</Btn>
+        <Btn onClick={() => updateProduct()}>編集</Btn>
       </Content>
     </StyledProducts>
   );

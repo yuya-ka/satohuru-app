@@ -5,19 +5,24 @@ import axios from "axios";
 const StyledProducts = styled.div`
   height: 100%;
   width: 100%;
-  margin: 50px 0 0 50px;
+  margin: 0;
 `;
 const ContentText = styled.div`
   width: 100%;
-  height: 100%;
+  height: 30px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const Content = styled.div`
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 `;
 const Btn = styled.button`
   width: 100px;
@@ -28,19 +33,31 @@ const Btn = styled.button`
 
 const Delete = () => {
   const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
-  const [products, setProducts] = useState(null);
-  
-  const deleteProducts = async () => {
-    await axios.delete(`${baseURL}/${7351}`)
-    setProducts(null);
+  const [product, setProduct] = useState(null);
+  useEffect(() => {
+    const getProducts = async () => {
+      const res = await axios.get(`${baseURL}/${8}`)
+      setProduct(res.data);
+    }
+    getProducts();
+  },[]);
+  const deleteProduct = async () => {
+    await axios.delete(`${baseURL}/${product.id}`)
+    setProduct(null);
   }
-
+  if (!product) {
+    return (<h2>表示されるデータがありません</h2>)
+  };
   return (
     <StyledProducts>
       <ContentText>
+        <div>{product.name}</div>
+        <div>{product.city}</div>
+        <div>{product.price}</div>
+        <div>{product.content}</div>
       </ContentText>
       <Content>
-        <Btn onClick={() => deleteProducts()}>削除</Btn>
+        <Btn onClick={() => deleteProduct()}>削除</Btn>
       </Content>
     </StyledProducts>
   );
