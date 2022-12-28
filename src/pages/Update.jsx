@@ -39,7 +39,7 @@ const ContentName = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
+//商品クリックするとそのidを取得できるようにする。今は任意のidを取得している状態。
 const Update = () => {
   const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
   const [product, setProduct] = useState(null);
@@ -59,6 +59,7 @@ const Update = () => {
     })
     setProduct(updateRes.data);
   };
+  //後で1つにまとめて、出力する。バリューをデフォルトではなくまとめて出す
   const [name, setName] = useState(null)
   const ChangeName = (e) => {
     setName(e.target.value)

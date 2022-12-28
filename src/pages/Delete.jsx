@@ -30,7 +30,7 @@ const Btn = styled.button`
   margin: 0;
   padding: 0;
 `;
-
+//商品クリックするとそのidを取得できるようにする。今は任意のidを取得している状態。
 const Delete = () => {
   const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
   const [product, setProduct] = useState(null);

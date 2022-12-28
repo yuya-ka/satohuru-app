@@ -52,7 +52,7 @@ const Create = () => {
     })
     setProducts(createRes.data);
   };
-  
+  //後で1つにまとめて、出力する。バリューをデフォルトではなくまとめて出す
   const [name, setName] = useState(null)
   const ChangeName = (e) => {
     setName(e.target.value)
