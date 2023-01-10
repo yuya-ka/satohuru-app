@@ -39,25 +39,26 @@ const ContentName = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
+
 //商品クリックするとそのidを取得できるようにする。今は任意のidを取得している状態。
 const Update = () => {
-  const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
   const [product, setProduct] = useState(null);
   useEffect(() => {
     const getProducts = async () => {
-      const res = await axios.get(`${baseURL}/${19}`)
+      const res = await axios.get(`${baseURL}/${1}`)
       setProduct(res.data);
     }
     getProducts();
   },[]);
   const updateProduct = async () => {
-    const updateRes = await axios.patch(`${baseURL}/${product.id}`, {
+    await axios.patch(`${baseURL}/${product.id}`, {
       name: name,
       city: city,
       price: price,
       content: content
     })
-    setProduct(updateRes.data);
   };
   //後で1つにまとめて、出力する。バリューをデフォルトではなくまとめて出す
   const [name, setName] = useState(null)
