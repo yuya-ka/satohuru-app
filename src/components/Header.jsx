@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import logo from "../images/logo_satofull01.webp"
 import icon1 from "../images/icon_header01.webp"
 import icon2 from "../images/icon_header02.webp"
@@ -10,75 +9,84 @@ import { GiPresent } from "react-icons/gi"
 import { BiMap } from "react-icons/bi"
 import { BsFillArchiveFill } from "react-icons/bs"
 
-
-/* ---------------- css ---------------- */
 const StyledHeader = styled.header`
-  min-width: 1020px;
-  margin: 0;
-  padding: 0;
-  width: auto;
+  min-width: 980px;
   height: auto;
-`;
-/* ---------------- top ---------------- */
-const StyledHeaderTop = styled.div`
-  min-width: 1020px;
   margin: 0;
   padding: 0;
+`;
+const HeaderTop = styled.div`
+  min-width: 1020px;
   height: 40px;
+  margin: 0;
+  padding: 0;
   background-color: #f7f3e7;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
-const StyledHeaderTopTag = styled.p`
+const TopContainer = styled.div`
+  width: 980px;
+  height: auto;
   margin: 0;
   padding: 0;
-  padding-left: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 12px;
 `;
-const StyledHeaderTopNav = styled.ul`
+const TopTag = styled.p`
   margin: 0;
-  margin-right: 60px;
   padding: 0;
-  list-style: none;
 `;
-const StyledHeaderTopNavLi = styled.li`
+const TopNav = styled.div`
   margin: 0;
   padding: 0;
-  list-style: none;
+`;
+const TopNavLi = styled.div`
+  margin: 0;
+  padding: 0;
   display: inline;
-  margin: 0 15px;
-  font-size: 12px;
+  margin: 0 0 0 20px;
 `;
-/* ---------------- center ---------------- */
-const StyledHeaderCenter = styled.div`
-  margin: 0 140px;
-  padding: 0;
+const HeaderCenter = styled.div`
+  min-width: 1020px;
   height: 60px;
+  margin: 0;
+  padding: 0;
   background-color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
-const StyledHeaderCenterLogo = styled.div`
+const CenterContainer = styled.div`
+  width: 980px;
+  height: auto;
   margin: 0;
   padding: 0;
-  width: 158px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
-const StyledHeaderCenterSearch = styled.div`
+const CenterLogo = styled.div`
+  width: 158px;
   margin: 0;
   padding: 0;
+`;
+const CenterSearch = styled.div`
   width: 400px;
   height: 36px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
 `;
-const StyledHeaderCenterSearchField = styled.input`
+const SearchField = styled.input`
+  width: 290px;
+  height: 100%;
   margin: 0;
   padding-left: 10px;
-  height: 100%;
-  width: 290px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   box-shadow: inset 0 4px 4px rgb(0 0 0 / 10%);
@@ -87,11 +95,11 @@ const StyledHeaderCenterSearchField = styled.input`
   color: #999;
   font-size: 12px;
 `;
-const StyledHeaderCenterSearchBtn = styled.button`
-  margin: 0;
-  padding: 0;
+const SearchBtn = styled.button`
   width: 100px;
   height: 100%;
+  margin: 0;
+  padding: 0;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   border: none;
@@ -101,118 +109,109 @@ const StyledHeaderCenterSearchBtn = styled.button`
   text-align: center;
   color: #fff;
 `;
-const StyledHeaderCenterNav = styled.ul`
+const CenterNav = styled.div`
   margin: 0;
   padding: 0;
-  list-style: none;
 `;
-const StyledHeaderCenterNavLi = styled.li`
+const CenterNavLi = styled.div`
   margin: 0;
   padding: 0;
-  list-style: none;
   display: inline;
 `;
-/* ---------------- bottom ---------------- */
-const StyledHeaderBottom = styled.div`
+const HeaderBottom = styled.div`
   min-width: 1020px;
   height: 50px;
   margin: 0;
-  padding: 0 20px 10px 20px;
+  padding: 0;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const BottomNav = styled.div`
+  width: 980px;
+  height: auto;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
 `;
-const StyledHeaderBottomNav = styled.ul`
+const BottomNavLi = styled.div`
   margin: 0;
   padding: 0;
-  list-style: none;
-`;
-const StyledHeaderBottomNavLi = styled.li`
-  margin: 0 100px;
-  padding: 0;
-  list-style: none;
   display: inline-block;
-  margin: 0 70px;
 `;
-const StyledHeaderBottomIcon = styled.div`
+const BottomIcon = styled.div`
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   display: flex;
   align-items: center;
 `;
-const StyledHeaderBottomList = styled.div`
+const BottomList = styled.div`
+  height: 100%;
   margin: 0;
   padding-left: 10px;
-  height: 100%;
 `;
 
-
-
-/* ---------------- jsx ---------------- */
 const Header = () => {
   return (
     <StyledHeader>
-      
-      <StyledHeaderTop>
-        <StyledHeaderTopTag>ランニングとレビューで探せる利用率No.1ふるさと納税サイト</StyledHeaderTopTag>
-        <StyledHeaderTopNav>
-          <StyledHeaderTopNavLi>ログイン</StyledHeaderTopNavLi>
-          <StyledHeaderTopNavLi>新規会員登録</StyledHeaderTopNavLi>
-          <StyledHeaderTopNavLi>よくあるご質問</StyledHeaderTopNavLi>
-          <StyledHeaderTopNavLi>クラウドファンディング</StyledHeaderTopNavLi>
-        </StyledHeaderTopNav>
-      </StyledHeaderTop>
-
-      <StyledHeaderCenter>
-        <StyledHeaderCenterLogo>
-          <img src={logo} alt='logo' height='42px' width='158px'/>
-        </StyledHeaderCenterLogo>
-        <StyledHeaderCenterSearch>
-          <StyledHeaderCenterSearchField placeholder='お礼の品のキーワードから探す'></StyledHeaderCenterSearchField>
-          <StyledHeaderCenterSearchBtn>検索</StyledHeaderCenterSearchBtn>
-        </StyledHeaderCenterSearch>
-        <StyledHeaderCenterNav>
-          <StyledHeaderCenterNavLi><img src={icon1} alt='icon1' height='40px' width='75px'/></StyledHeaderCenterNavLi>
-          <StyledHeaderCenterNavLi><img src={icon2} alt='icon2' height='40px' width='75px'/></StyledHeaderCenterNavLi>
-          <StyledHeaderCenterNavLi><img src={icon3} alt='icon3' height='40px' width='75px'/></StyledHeaderCenterNavLi>
-          <StyledHeaderCenterNavLi><img src={icon4} alt='icon4' height='40px' width='75px'/></StyledHeaderCenterNavLi>
-        </StyledHeaderCenterNav>
-      </StyledHeaderCenter>
-
-      <StyledHeaderBottom>
-        <StyledHeaderBottomNav> 
-
-          <StyledHeaderBottomNavLi>
-            <StyledHeaderBottomIcon>
-              <FaCrown /><StyledHeaderBottomList>人気ランキング</StyledHeaderBottomList>
-            </StyledHeaderBottomIcon>
-          </StyledHeaderBottomNavLi>
-
-          <StyledHeaderBottomNavLi>
-            <StyledHeaderBottomIcon>
-              < GiPresent /><StyledHeaderBottomList>お礼品から探す</StyledHeaderBottomList>
-            </StyledHeaderBottomIcon>
-          </StyledHeaderBottomNavLi>
-
-          <StyledHeaderBottomNavLi>
-            <StyledHeaderBottomIcon>
-              < BiMap /><StyledHeaderBottomList>地域から探す</StyledHeaderBottomList>
-            </StyledHeaderBottomIcon>
-          </StyledHeaderBottomNavLi>
-
-          <StyledHeaderBottomNavLi>
-            <StyledHeaderBottomIcon>
-              < BsFillArchiveFill /><StyledHeaderBottomList>特集・キャンペーン</StyledHeaderBottomList>
-            </StyledHeaderBottomIcon>
-          </StyledHeaderBottomNavLi>
-        
-        </StyledHeaderBottomNav>
-      </StyledHeaderBottom>
-
+      <HeaderTop>
+        <TopContainer>
+          <TopTag>ランニングとレビューで探せる利用率No.1ふるさと納税サイト</TopTag>
+          <TopNav>
+            <TopNavLi>ログイン</TopNavLi>
+            <TopNavLi>新規会員登録</TopNavLi>
+            <TopNavLi>よくあるご質問</TopNavLi>
+            <TopNavLi>クラウドファンディング</TopNavLi>
+          </TopNav>
+        </TopContainer>
+      </HeaderTop>
+      <HeaderCenter>
+        <CenterContainer>
+          <CenterLogo>
+            <img src={logo} alt='logo' height='42px' width='158px'/>
+          </CenterLogo>
+          <CenterSearch>
+            <SearchField placeholder='お礼の品のキーワードから探す'></SearchField>
+            <SearchBtn>検索</SearchBtn>
+          </CenterSearch>
+          <CenterNav>
+            <CenterNavLi><img src={icon1} alt='icon1' height='40px' width='75px'/></CenterNavLi>
+            <CenterNavLi><img src={icon2} alt='icon2' height='40px' width='75px'/></CenterNavLi>
+            <CenterNavLi><img src={icon3} alt='icon3' height='40px' width='75px'/></CenterNavLi>
+            <CenterNavLi><img src={icon4} alt='icon4' height='40px' width='75px'/></CenterNavLi>
+          </CenterNav>
+        </CenterContainer>
+      </HeaderCenter>
+      <HeaderBottom>
+        <BottomNav> 
+          <BottomNavLi>
+            <BottomIcon>
+              <FaCrown /><BottomList>人気ランキング</BottomList>
+            </BottomIcon>
+          </BottomNavLi>
+          <BottomNavLi>
+            <BottomIcon>
+              < GiPresent /><BottomList>お礼品から探す</BottomList>
+            </BottomIcon>
+          </BottomNavLi>
+          <BottomNavLi>
+            <BottomIcon>
+              < BiMap /><BottomList>地域から探す</BottomList>
+            </BottomIcon>
+          </BottomNavLi>
+          <BottomNavLi>
+            <BottomIcon>
+              < BsFillArchiveFill /><BottomList>特集・キャンペーン</BottomList>
+            </BottomIcon>
+          </BottomNavLi>
+        </BottomNav>
+      </HeaderBottom>
     </StyledHeader>
   );
-}
+};
 
 export default Header;

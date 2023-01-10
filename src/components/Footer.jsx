@@ -1,124 +1,89 @@
 import styled from "styled-components";
+import FooterTop from "./footer/Summary";
+import logo from "../images/logo_satofull01.webp"
 
-/* ---------------- css ---------------- */
-const StyledFooter = styled.footer`
+const FooterCenter = styled.footer`
   min-width: 1020px;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: auto;
-  position: relative;
-`;
-/* ---------------- top ---------------- */
-const StyledFooterTop = styled.div`
-  margin: 0;
-  padding: 0;
-  background-color: #f7f3e7;
-  min-width: 1020px;
-`;
-const StyledFooterTopContent = styled.div`
-  width: 980px;
-  height: 676.4px;
-  margin: 0 auto;
-  padding: 40px 20px;
-`;
-const StyledFooterTopContentFirst = styled.div`
-  height: 80%;
-  width: 980px;
-  margin: 0;
-  padding: 4px;
-  box-sizing: border-box;
-  border: solid 2px black;
-  display:flex;
-`;
-const StyledFooterTopContent1 = styled.div`
-  height: 100%;
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: solid 2px black;
-`;
-const StyledFooterTopContent2 = styled.div`
-  height: 100%;
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: solid 2px black;
-`;
-const StyledFooterTopContentLast = styled.div`
-  margin-top: 40px;
-  width: 980px;
-  box-sizing: border-box;
-  border: solid 2px black;
-  height: 20%;
-`;
-/* ---------------- center ---------------- */
-const StyledFooterCenter = styled.div`
-  min-width: 1020px;
-  margin: 0;
-  padding: 0;
-  line-height: 1.7;
   height: 60px;
-  background-color: #c79a74;
-`;
-const StyledFooterCenterContent = styled.div`
-  width: 980px;
-  height: 37.8px;
-  margin: 0 auto;
-  padding: 21px 20px 0;
-  box-sizing: border-box;
-  border: solid 2px black;
-`;
-/* ---------------- bottom ---------------- */
-const StyledFooterBottom = styled.div`
-  position: relative;
-  width: 100%;
-  height: 71px;
-  background-color: #eeefea;
-  min-width: 1020px;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  background-color: #c79a74;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-const StyledFooterBottomContent = styled.div`
-  width: 1020px;
+const CenterContent = styled.div`
+  width: 980px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+`;
+const ContentNav = styled.div`
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+`;
+const ContentNavLi = styled.div`
+  margin: 0;
+  padding: 0;
+  display: inline;
+  margin: 0;
+  font-size: 12px;
+  justify-content: center;
+`;
+const FooterBottom = styled.div`
+  min-width: 1020px;
   height: 71px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  border: solid 2px black;
+  margin: 0;
+  padding: 0;
+  background-color: #eeefea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const BottomContent = styled.div`
+  width: 980px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const ContentText = styled.p`
+  font-size: 15px;
 `;
 
-
-
-/* ---------------- jsx ---------------- */
 const Footer = () => {
   return (
-    <StyledFooter>
-
-      <StyledFooterTop>
-        <StyledFooterTopContent>
-          <StyledFooterTopContentFirst>
-            <StyledFooterTopContent1></StyledFooterTopContent1>
-            <StyledFooterTopContent2></StyledFooterTopContent2>
-          </StyledFooterTopContentFirst>
-          <StyledFooterTopContentLast></StyledFooterTopContentLast>
-        </StyledFooterTopContent>
-      </StyledFooterTop>
-
-      <StyledFooterCenter>
-        <StyledFooterCenterContent>
-        </StyledFooterCenterContent>
-      </StyledFooterCenter>
-
-      <StyledFooterBottom>
-        <StyledFooterBottomContent>
-        </StyledFooterBottomContent>
-      </StyledFooterBottom>
-
-    </StyledFooter>
+    <>
+    <FooterTop />
+    <FooterCenter>
+      <CenterContent>
+        <ContentNav>
+          <ContentNavLi>サイトマップ </ContentNavLi>
+          <ContentNavLi>サイトポリシー</ContentNavLi>
+          <ContentNavLi>規約</ContentNavLi>
+          <ContentNavLi>個人情報保護方針</ContentNavLi>
+          <ContentNavLi>情報セキュリティ方針</ContentNavLi>
+          <ContentNavLi>免責事項</ContentNavLi>
+          <ContentNavLi>会社概要</ContentNavLi>
+          <ContentNavLi>自治体関係者の皆様へ</ContentNavLi>
+          <ContentNavLi>採用情報</ContentNavLi>
+        </ContentNav>
+      </CenterContent>
+    </FooterCenter>
+    <FooterBottom>
+      <BottomContent>
+        <img src={logo} alt='logo' height='35px' width='auto' />
+        <ContentText>© Satofull Co., Ltd. All rights reserved.</ContentText>
+      </BottomContent>
+    </FooterBottom>
+    </>
   );
-}
+};
 
 export default Footer;
