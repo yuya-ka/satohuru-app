@@ -40,19 +40,19 @@ const ContentName = styled.div`
   align-items: center;
 `;
 
+const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
+
 const Create = () => {
-  const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
-  const [products, setProducts] = useState(null);
   const createProducts = async () => {
-    const createRes = await axios.post(baseURL, {
+    await axios.post(baseURL, {
       name: name,
       city: city,
       price: price,
-      content: content
+      content: content,
+      category_id: category
     })
-    setProducts(createRes.data);
   };
-  //後で1つにまとめて、出力する。バリューをデフォルトではなくまとめて出す
+  //後で1つにまとめて、出力する。(おそらくこれが限界)
   const [name, setName] = useState(null)
   const ChangeName = (e) => {
     setName(e.target.value)
@@ -68,6 +68,10 @@ const Create = () => {
   const [content, setContent] = useState(null)
   const ChangeContent = (e) => {
     setContent(e.target.value)
+  }
+  const [category, setCategory] = useState(null)
+  const ChangeCategory = (e) => {
+    setCategory(e.target.value)
   }
   
   return (
@@ -87,6 +91,10 @@ const Create = () => {
       <ContentText>
         <ContentName>content</ContentName>
         <input onChange={ChangeContent}></input>
+      </ContentText>
+      <ContentText>
+        <ContentName>category</ContentName>
+        <input onChange={ChangeCategory}></input>
       </ContentText>
       <Content>
         <Btn onClick={() => createProducts()}>作成</Btn>

@@ -30,7 +30,7 @@ const ContainerInner = styled.div`
   padding: 0;
   display: flex;
 `;
-
+//本当はMain.jsxでタイトルと商品の情報を分岐させたい。
 const Ranking = (props) => {
   const baseURL = `${process.env.REACT_APP_API_HOST}/products`;
   const [products, setProducts] = useState(null);
@@ -44,7 +44,6 @@ const Ranking = (props) => {
   if (!products) {
     return (<h2>表示されるデータがありません</h2>)
   };
-  //沢山表示されるのは、アイテムが複数のタイトルに重複されているから
   return (
     <Group>
       <Title title={props.rankingTitle}/>
